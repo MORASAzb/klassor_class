@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter&display=swap');
+body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family:'DM Sans';
+            background-color: rgba(33, 31, 126, 0.897);
+
+
+        }
+    .background
+
+            {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                transform: translate(-50% ); /* Adjust to properly center the background */
+
+                width: 100vw;
+                height: 100vh;
+                background-image: url('./Background.png') ;
+                background-size: cover; 
+                background-position: start start;
+                margin: auto;
+                max-width: 100vw;
+                max-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                text-align: center;
+                z-index: -1; 
+                opacity: 0.6;
+
+            }
+    .container
+            {
+                width: 100vw;
+                height: 100vh;
+                background-size: cover; 
+                background-position: start start;
+                margin: auto;
+                max-width: 100vw;
+                max-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                text-align: center;
+
+            }
+        .title
+                {
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 42px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 52px; 
+                    letter-spacing: -0.4px;
+                    margin-top: 100px;
+                    margin-bottom: 60px;
+                }
+        .placeholder
+                {
+                    margin: 5px;
+                    background-color: white;
+                    max-width: 570px;
+                    max-height: 590px;;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            .option
+                    {
+                        display: flex;
+                        justify-content: space-around;
+
+                    }
+                .option-title
+                        {
+                            color: var(--colors-text, rgba(21, 20, 57, 0.40));
+                            
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 26px;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            width: 50%;
+                            padding: 25px 10px;
+                            border-bottom: 4px #1d0e6236 solid ;
+
+                        }
+                .selected-option
+                        {
+                            color: var(--colors-heading, #1E0E62);
+                            border-bottom: 4px #1E0E62 solid ;
+                        }
+            .credit-form
+                        {
+                            padding: 35px calc(15% - 30px) ;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                        }
+                .input-group
+                            {
+                                margin: 12px 0px;
+                                grid-column: span 2;
+                            }
+                    .input-group label
+                            {
+                                display: block;
+                                text-align: start;
+                                margin-bottom: 7px;
+                                color: var(--colors-heading, #1E0E62);
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 26px;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                            }
+                    .input-group input
+                            {
+                                width:calc(100% - 35px);
+                                height: 50px;
+                                border-radius: 100px;
+                                padding-left: 15px;
+                                border: 2px solid var(--colors-grey, #EBEAED);
+                            }
+                    .col-1
+                            {
+                                grid-column: span 1;
+                            }
+                    .col-3
+                            {
+                                grid-column: span 3;
+                            }  
+                    .check-out-purchace
+                            {
+                                grid-column: span 4;
+                                width: 100%;
+                                border-radius: 100px;
+                                height: 60px;
+                                background: var(--action-primary, #25DAC5);
+                                border: 0px;
+                                margin: 30px 0px;
+                                color: var(--colors-white, #FFF);
+                                text-align: center;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 26px; 
+                            }
