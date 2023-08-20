@@ -1,2 +1,2 @@
-# klassor_clas
+# klassor_clasc
 For React class
