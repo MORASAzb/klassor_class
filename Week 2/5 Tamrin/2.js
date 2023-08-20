@@ -1,4 +1,4 @@
-const name=prompt("Your name ?")
+const name=prompt("Your name ?");
 function reverseString(str) {
     let reversed = '';
     for (let i = str.length - 1; i >= 0; i--) {
@@ -6,4 +6,4 @@ function reverseString(str) {
     }
     return reversed;
   }
-alert(reverseString(name))
+alert(reverseString(name));

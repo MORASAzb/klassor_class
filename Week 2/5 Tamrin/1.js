@@ -17,14 +17,14 @@ function isPrime(number) {
 if( isPositiveNumber(number) == true)
     {   
         if (isPrime(number) == true){
-            answer="it's a Prime"
+            answer="it's a Prime";
         }
         else{
-            answer ="Not a Prime"
+            answer ="Not a Prime";
         }
         }
 else
     {
-        answer="Not a valid number"
+        answer="Not a valid number";
         }
-alert(answer)
+alert(answer);

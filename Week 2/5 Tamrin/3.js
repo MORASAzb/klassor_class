@@ -1,4 +1,4 @@
-const number=prompt("A number ? (Digit)")
+const number=prompt("A number ? (Digit)");
 function isPositiveNumber(input) {
   const number = parseFloat(input);
   return !isNaN(number) && number > 0;
@@ -17,11 +17,11 @@ let answer=""
 if  (isPositiveNumber(number) == true){
   for (let index = 1; index < number; index++) {
     if (hasSumOfSquares(index) == true){
-      answer = answer +  (" "+index +" ")
+      answer = answer +  (" "+index +" ");
     }
   }
 }
 else{
-  answer="Not a valid number"
+  answer="Not a valid number";
 }
-console.log(answer)
+console.log(answer);
