@@ -219,6 +219,201 @@
                     border: none;
                     
                 }
+                .sec-4{
+                    padding-top:70px ;
+                }
+                    .cards{
+                        display: flex;
+                        justify-content: center;
+                        margin: auto;
+                        gap: 32px;
+                    }
+                        .card{
+                            width: 342px;
+                            height: 239px;
+                            position: relative;
+                        }
+                            .card>img{
+                                width: 100%;
+                                position: absolute;
+                                z-index: 1;
+
+                            }
+                            .card-info{
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 2;
+                                padding-left: 27px;
+                                padding-bottom: 18px;
+                            }
+                                .card-title{
+                                    color: #FFF;
+                                    font-family: Raleway;
+                                    font-size: 34px;
+                                    font-style: normal;
+                                    font-weight: 900;
+                                    line-height: 40px;
+                                    margin: 0;
+                                }
+                                .card-des{
+                                    color: #FFF;
+                                    font-family: Raleway;
+                                    font-size: 15px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 22px;
+                                    margin: 0;
+                        }
+                    .sec-4>p{
+                            text-align: center;
+                            color: #000;
+                            text-align: center;
+                            font-family: Playfair Display;
+                            font-size: 44px;
+                            font-style: normal;
+                            font-weight: 900;
+                            line-height: 48px;
+                            max-width: 750px;
+                            margin: auto;
+                            padding-right: 50px;
+                            margin-top: 40px;
+                            margin-bottom: 30px;
+
+                            
+                        }
+                    .subscribe{
+                            text-align: center;
+                            margin-top: 50px;
+                            margin-bottom: 50px;
+                            padding-right: 30px;
+                        }
+                        .subscribe>input{
+                            width: 210px;
+                            height: 62px;
+                            color: #000;
+                            font-family: Raleway;
+                            font-size: 21px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 25px; /* 119.048% */
+                            letter-spacing: 1.05px;
+                            padding-right: 180px;
+                            padding-left: 30px;
+                            margin-right: 20px;
+                            border-width: 1px;
+                            border-radius: 5px;
+                            box-sizing: content-box;
+                        }
+                        .subscribe>button{
+                            width: 221px;
+                            height: 65px;
+                            background-color: #4BA87D;
+                            border: none;
+                            color: #FFF;
+                            text-align: center;
+                            font-family: Raleway;
+                            font-size: 21px;
+                            font-style: normal;
+                            font-weight: 900;
+                            line-height: 25px; /* 119.048% */
+                            letter-spacing: 1.05px;
+                            margin-right: 20px;
+
+                        }
+            footer{
+                background-color: #4BA87D;
+                padding-top: 80px;
+
+            }
+                .site-map{
+                    display: flex;
+                    margin: auto;
+                    justify-content: space-between;
+                    align-items: start;
+                    max-width: 950px;
+                    margin-bottom: 50px;
+                }
+                    .ninja-logo{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+                        .ninja-logo>a{
+                            text-decoration: none;
+                            color: #FFF;
+                            font-family: Raleway;
+                            font-size: 26px;
+                            font-style: normal;
+                            font-weight: 950;
+                            line-height: 31px;
+                        }
+                        .ninja-logo>img{
+                            height: 31px;
+                        }
+                    .links{
+                        display: flex;
+                        gap: 70px;
+
+                    }
+                        .block-links{
+                            display: flex;
+                            flex-direction: column;
+                            
+                        }
+                            .block-links>a{
+                                color: #FFF;
+                                font-family: Raleway;
+                                font-size: 19px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 22px;
+                                text-decoration: none;
+                                margin-bottom: 10px;
+                                
+                            }
+                .divider{
+                    padding: 0.5px;
+                    background-color: #FFF;
+                    max-width: 1100px;
+                    margin: 40px auto;
+                }   
+                .legals{
+                    display: flex;
+                    margin: auto;
+                    text-align: center;
+                    justify-content: space-between;
+                    padding-bottom: 40px;
+                    max-width: 980px;
+                }   
+                    .copy-right{
+                        color: #FFF;
+                        font-family: Raleway;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 18px;
+                        box-sizing: border-box;
+                        
+
+                    }   
+                    .legal-pages{
+                        margin-right: 60px;
+                        
+
+                    }
+                        .legal-pages>a{
+                            color: #FFF;
+                            font-family: Raleway;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 18px;
+                            text-decoration: none;
+                        }
+
+
+
                 @media(max-width:925px){
                     nav>ul{
                         display: none;
@@ -333,7 +528,106 @@
             </div>
 
         </div>
+        <div class="sec-4">
+            <div class="cards">
+                <div class="card">
+                    <img src=".\photo (3).png" alt="">
+                    <div class="card-info">
+                        <h5 class="card-title">
+                            Frankie
+                        </h5>
+                        <p class="card-des">
+                            Member since 2016
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src=".\photo (4).png" alt="">
+                    <div class="card-info">
+                        <h5 class="card-title">
+                            Camile
+                        </h5>
+                        <p class="card-des">
+                            Member since 2012
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src=".\photo (5).png" alt="">
+                    <div class="card-info">
+                        <h5 class="card-title">
+                            Elayne
+                        </h5>
+                        <p class="card-des">
+                            Member since 2018
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>
+                Learn how others are reaching their audience easier than ever before.
+            </p>
+            <div class="subscribe">
+                <input type="text" value="Enter your email">
+                <button>
+                    JOIN OUR LIST
+                </button>
+             </div>
 
-        
+        </div>
+        <footer>
+            <div class="site-map">
+                <div class="ninja-logo">
+                    <img src="./logo.png" alt="">
+                    <a href="">NinjaMail</a>
+                </div>
+                <div class="links">
+                    <div class="block-links">
+                        <a href="">Features</a>
+                        <a href="">Pricing</a>
+                        <a href="">Services</a>
+                        <a href="">Partners</a>
+                    </div>
+                    <div class="block-links">
+                        <a href="">About Us</a>
+                        <a href="">Tutorials</a>
+                        <a href="">Resources</a>
+                        <a href="">Help Center</a>
+                        <a href="">Templates</a>
+                        <a href="">Case Studies</a>
+                    </div>
+                    <div class="block-links">
+                        <a href="">Medium</a>
+                        <a href="">Twitter</a>
+                        <a href="">Facebook</a>
+                        <a href="">Instagram</a>
+                        <a href="">LinkedIn</a>
+
+                    </div>
+                    <div class="block-links">
+                        <a href="">Contact Us</a>
+                        <a href="">Slack</a>
+                        <a href="">Jobs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divider">
+
+            </div>
+            <div class="legals">
+                <div class="copy-right">
+                    NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All rights reserved.
+                </div>
+                <div class="legal-pages">
+                    <a href="">
+                        Terms & Conditions
+                    </a>
+                    <a href="">
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+
+        </footer>
     </body>
 </html>
