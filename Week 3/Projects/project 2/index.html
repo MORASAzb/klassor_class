@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html
+dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <title>Digiato</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://db.onlinewebfonts.com/c/5c53f1a72f61b5b51e2ea79a22ebc38b?family=IRANSansWeb%28FaNum%29" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: "IRANSansWeb(FaNum)";
+            }
+                nav{
+                    display: flex;
+                    background-color: #F1F2F7;
+                    padding: 30px 102px;
+                    height: 120px;
+                    align-items: center;
+                }
+                    .logo-wrapper
+                    {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 30px;
+                        height: 60px;
+                    }
+                        .logo-texts{
+                            padding-bottom: 30px;
+                        }
+                            .logo-wrapper h2,p{
+                                margin: 0;
+                                padding: 0;
+                            }
+                            
+                            .logo-wrapper h2{
+                                color: #505050;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 40px;
+                                position: relative;
+                            }
+                            .logo-wrapper p{
+                                color: #505050;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 40px;
+                                position: absolute;
+                                top: 35px;
+                            }
+                        .logo-images{
+                            position: relative;
+                            width: 64px;
+                            height: 64px;
+                            margin-left: 13px;
+                        }
+                            .logo-images img{
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50% , -50%);
+                                width: 46px;
+                                height: 46px;
+                            }
+                                .logo-images img{
+                                    z-index: 1;
+                                    width: 64px;
+                                    height: 64px;
+                                }
+                                .logo-images img:first-child{
+                                    z-index: 2;
+                                    width: 46px;
+                                    height: 46px;
+                                }
+                    nav *{
+                        text-decoration: none;
+                        color: #505050;
+                        text-align: right;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+
+                    }
+                    nav>ul{
+                        display: flex;
+                        list-style: none;
+                        flex-grow: 1;
+                    }
+                        nav>ul>li{
+                            margin-left: 48px;
+
+                        }
+                    nav>button{
+                        font-family: "IRANSansWeb(FaNum)";
+                        width: 147px;
+                        height: 40px;
+                        border: none;
+                        text-align: center;
+                        border-radius: 8px;
+                        background: #FFF;
+                        color: #0049B7;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                .advertise{
+                    display: flex;
+                    background-color: #F1F2F7;
+                    padding: 5px 102px 45px;
+                    align-items: center;
+                    justify-content: center ;
+
+                }
+                    .image-info{
+                        width: calc(50% - 102px) ;             
+                    }  
+                        .image-info>img{
+                            width: 500px;
+                        }
+                    .info-wrapper{
+                        display: flex;
+                        flex-direction: column; 
+                        align-items: end;  
+                        margin-left: 85px;
+                        width: calc(50% - 102px);
+                    }
+                    .info{
+                     width: 520px;
+                    } 
+
+                        .info>h1{
+                            color: #505050;
+                            font-size: 48px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 40px;
+                            display: flex;
+
+                        }
+                        .info>p{
+                            color: #505050;
+                            text-align: right;
+                            font-family: "IRANSansWeb(FaNum)";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 40px; /* 250% */
+                            max-width: 540px;
+
+                        }
+                        .info>.buttons{
+                            margin-top: 25px;
+
+                        }
+                            .info>.buttons>button{
+                                color: #FFF;
+                                font-family: "IRANSansWeb(FaNum)";
+                                text-align: center;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                width: 144px;
+                                height: 40px;
+                                border-radius: 8px;
+                                background: #0049B7;
+                                border: none;
+                            }
+                            .info>.buttons>a{
+                                color: #0049B7;
+                                font-family: "IRANSansWeb(FaNum)";
+                                text-align: center;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                width: 144px;
+                                height: 40px;
+                                border-radius: 8px;
+                                border: none;
+                                margin-right: 30px;
+                            }
+            .blue-text{
+                color: #0049B7;
+                margin-right: 12px;
+                        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo-wrapper">
+                <div class="logo-images">
+                    <img src=".\Digiato-logo-min 3.png" alt="Digiato-Logo">
+                    <img src=".\Ellipse 3.png" alt="Digiato-Logo-background">
+                </div>
+                <div class="logo-texts">
+                    <h2>
+                        دیجیاتو
+                        <p>
+                            digiato.com
+                        </p>
+                    </h2>
+
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="">چرا دیجیاتو؟
+                    </a>
+                </li>
+                <li>
+                    <a href="">رپورتاژ آگهی
+                    </a>
+                </li>
+                <li><a href="">
+                    بک‌لینک
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        لینک پرومکس
+                    </a>
+                </li>
+            </ul>
+            <button>
+                مشاهده وبسایت
+            </button>
+        </nav>
+        <div class="advertise">
+            <div class="info-wrapper">
+                <div class="info">
+                    <h1>
+                        تبلیغات در 
+                        <div class="blue-text">دیجیاتو</div>
+                    </h1>
+                    <p>
+                        رقابت برای داشتن یک کسب و کار موفق در دنیای امروزی با پیچیدگی های بسیاری همراه است. برندها برای معرفی محصولات و خدمات خود، روش های متفاوتی را در یک رقابت فشرده آغاز کرده اند
+                    </p>
+                    <div class="buttons">
+                        <button>
+                            مشاهده تعرفه‌ها
+                        </button>
+                        <a>
+                            مشاهده وبسایت
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-info">
+                <img src=".\DIGIATO.png" alt="">
+            </div>
+        </div>
+
+
+        
+    </body>
+</html>
