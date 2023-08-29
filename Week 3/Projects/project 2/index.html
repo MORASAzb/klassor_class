@@ -190,10 +190,121 @@ dir="rtl">
                                 border: none;
                                 margin-right: 30px;
                             }
+                .whyus{
+                    padding: 30px 102px 82px;
+                    margin: auto;
+                    justify-content: center;
+                    display: flex;
+                    max-width: 1366px;
+
+                    
+
+                }
+                    .whyus h3{
+                        color: #505050;
+                        font-family: 'IRANSansWeb(FaNum)';
+                        font-size: 40px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px; /* 100% */
+                        display: flex;
+                    }
+
+                    .stats{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        gap: 19px;
+
+                    }
+                        .stat-des{
+                            grid-column:2 span ;  
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: space-around;
+
+                        }
+                            .stat-des>div {
+                                color: #505050;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 40px; /* 250% */
+
+                            }
+                        .stat-card{
+                            background: #FFF;
+                            border-radius: 24px;
+                            width: 262px;
+                            height: 209px;
+                            border: 1px solid #DDD;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 40px 0px 20px ;
+                        }
+                            .rank{
+                                color: #505050;
+                                text-align: right;
+                                font-size: 48px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 40px;
+                                flex-grow: 1;
+                            }
+                                .rank>small{
+                                    color: #CECECE;
+                                    text-align: right;
+                                    font-size: 24px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 40px;
+                                }
+                            .rank-title{
+                                color: #505050;
+                                text-align: right;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 40px; 
+                                margin: 0;
+                                
+                            }
+                            .rank-des{
+                                color: rgba(80, 80, 80, 0.70);
+                                text-align: center;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 40px;
+                            }
+                        .silver{
+                            background: rgba(218, 218, 218, 0.24);
+                            border: none;
+                        }
             .blue-text{
                 color: #0049B7;
                 margin-right: 12px;
                         }
+            .emph{
+                color: #505050;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+                margin: 0;
+                padding: 0;
+            }
+            small.english-k{
+                color: #C9C9C9;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+                text-align: right;
+                margin-left: 12px;
+            }
         </style>
     </head>
     <body>
@@ -258,6 +369,88 @@ dir="rtl">
             </div>
             <div class="image-info">
                 <img src=".\DIGIATO.png" alt="">
+            </div>
+        </div>
+        <div class="whyus">
+            <div>
+                <h3>
+                    چرا  <div class="blue-text">دیجیاتو</div>؟
+                </h3>
+                <div class="stats"> 
+                    <div class="stat-des">
+                        <div>
+                            رسانه‌ی دیجیاتو ماهانه میزبان
+                                <small class="emph">۲۹۸هزار نفر</small>
+                                از مخاطبین علاقه‌مند به موضوعات
+                                <small class="emph">تکنولوژی، سرگرمی، عملی و آموزشی، هنر</small>
+                                و 
+                                <small class="emph">سبک زندگی</small>
+                                می‌باشد.
+                        </div>
+                        <div>
+                                    و همچین بیش از 
+                                    <small class="emph">2,148 مقاله</small>
+                                    در
+                                    <small class="emph">صفحه یک گوگل</small>
+                                    برای کلمات کلیدی متنوع دارد.
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="rank">2,381 <small><img width="20%" src=".\Group 12715.png" alt=""></small></div>
+                        <h5 class="rank-title">
+                            رتبه‌ی سیمیلاروب جهانی
+                        </h5>
+                        <p class="rank-des">
+                            Similarweb Global Rank
+                        </p>
+                    </div>
+                    <div class="stat-card silver">
+                        <div class="rank">۴۷ <small><img width="32%" src=".\Group 12712.png" alt=""></small></div>
+                        <h5 class="rank-title">
+                            رتبه‌ی سیمیلاروب ایران
+                        </h5>
+                        <p class="rank-des">
+                            Similarweb Country Rank
+                        </p>
+                    </div>
+                    <div class="stat-card silver">
+                        <div class="rank">6۳<small>/100</small></div>
+                        <h5 class="rank-title">
+                            قدرت دامنه
+                        </h5>
+                        <p class="rank-des">
+                            Ahrefs Domain Rating
+                        </p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="rank">۴۷<small>/100</small></div>
+                        <h5 class="rank-title">
+                            رتبه‌بندی دامنه
+                        </h5>
+                        <p class="rank-des">
+                            Ahrefs Domain Rating
+                        </p>
+                    </div>
+                    <div class="stat-card silver">
+                        <div class="rank">298<small class="english-k">K</small>
+                        </div>
+                        <h5 class="rank-title">
+                            بازدید ماهانه    
+                        </h5>
+                        <p class="rank-des">
+                            Similarweb Monthy Views
+                        </p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="rank">23<small>/100</small></div>
+                        <h5 class="rank-title">
+                            امتیاز اسپم
+                        </h5>
+                        <p class="rank-des">
+                            MOZ Spam Score
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
