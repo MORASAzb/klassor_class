@@ -1,0 +1,70 @@
+function userInfoArranger(userInfo) {
+    const manipulatedUserIfo = {
+        ...userInfo,
+        sum : sumArrayIndices(userInfo.faveNum),
+        "fullName":userInfo["name"]+" "+userInfo["lastName"]
+    }
+    return manipulatedUserIfo
+}
+function sumArrayIndices(arr) {
+    let totalSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      totalSum += 1 * arr[i];
+    }
+    return totalSum;
+  }
+const userInfo={
+    "name":'',
+    "age":'',
+    'lastName':'',
+    "faveNum":[]
+
+}
+
+
+userInfo['name']=prompt("Your name")
+userInfo['age']=prompt("Your age")
+userInfo['lastName']=prompt("Your lastName")
+while (true) {
+    const faveNum=Number(prompt("Your faveNum (put -1 if none)"))
+    if (faveNum == -1){
+        break
+    }
+    userInfo['faveNum'].push(faveNum)
+}
+
+console.log(userInfoArranger(userInfo))
+
+
+const arr1 = [10,20,30]
+
+
+const answerArr = (arr1) => {
+    const result = arr1.map(
+        function(x,i){
+            return x *(i+1)
+        }
+    )
+    return result
+}
+console.log(arr1.map(
+    function(x,i){
+        return x *(i+1)
+    }
+))
+
+arrayNumber=[10,20,15]
+function zoogKeeper(arrayNumber) {
+    const zoogNumber = arrayNumber.filter(
+        (value) =>{
+            return value%2 == 0  
+        })
+    return zoogNumber
+}
+console.log(zoogKeeper(arrayNumber))
+function showKeyValue(object) {
+    for (const key in object) {
+        console.log(key + object[key])
+    }
+}
+showKeyValue({key1:"val1",key2:"val2"})
