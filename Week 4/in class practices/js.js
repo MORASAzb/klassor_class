@@ -68,3 +68,13 @@ function showKeyValue(object) {
     }
 }
 showKeyValue({key1:"val1",key2:"val2"})
+const userNumbers=[]
+while (true) {
+    const faveNum=Number(prompt("Your faveNum (put -1 if none)"))
+    if (faveNum == -1){
+        break
+    }
+    userNumbers.push(faveNum)
+}
+const userCheckNumber=Number(prompt("give number to check is existance"))
+alert(userCheckNumber == userNumbers.find(userCheckNumber => userNumbers.includes(userCheckNumber)))
