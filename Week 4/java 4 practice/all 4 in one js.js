@@ -17,14 +17,9 @@ function practiceOne(str)
         answer=answer.split("").filter((value) => !vowelLetters.includes(value) ).join("")
         return answer
     }
-    function powerTwo(digit) {
-        return digit ** 2
-        
-    }
+
 function practiceTwo(array) {
         let names = "Nobody"
-        console.log(array)
-        console.log(array.length)
         if (array.length > 1 ){
             array[array.length - 1] = " and " + array[array.length - 1];
             names = array.join(", ").replace((", "+array.at(-1)), array.at(-1))
@@ -33,7 +28,6 @@ function practiceTwo(array) {
             names = array[0]
         }
         let like = array.length < 2 ? "likes" : "like"
-        
         const answer = `${names} ${like} this.` 
         return answer
     
