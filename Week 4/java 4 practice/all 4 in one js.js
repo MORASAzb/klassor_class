@@ -32,9 +32,10 @@ function practiceTwo(array) {
         return answer
     
 }
-function practiceThree(array,array2) {
-    answer =  array
-    answer=answer.filter((value => !array2.includes(value)))
+function practiceThree(array1,array2) {
+    const fillteredArray1 =  array1.filter((value => !array2.includes(value)))
+    const filteredArray2 = array2.filter((value => !array1.includes(value)))
+    answer= [...fillteredArray1,...filteredArray2]
     return answer
 
 }
