@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    font-family: Figtree;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+button{
+                    color: #000;
+                    display: flex;
+                    width: 400px;
+                    height: 60px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    background: #000;
+                    color: #FFF;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    border: none;
+                    gap: 5px;
+                }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        max-height: 900px;
+        max-width: 1440px;
+    }
+        .signin_form{
+            display: flex;
+            flex-direction: column;
+            min-height: 580px;
+            flex-grow: 1;
+            padding: 70px 20px ;
+            align-items: center;
+        }
+            h1{
+                margin: 0;
+                color: #000;
+                text-align: center;
+                font-family: Figtree;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            .form_body{
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                flex-grow: 1;
+                gap: 16px;
+                margin: 30px 0;
+                
+            }
+
+                .form_body>small{
+                    color: #000;
+                    font-family: Figtree;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-align: start;
+                    
+
+                }
+
+                .form_body>input{
+                    color: rgba(0, 0, 0, 0.40);
+                    font-family: 'Figtree';
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    display: flex;
+                    width: 400px;
+                    height: 60px;
+                    padding: 10px 20px;
+                    align-items: center;
+                    gap: 20px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.40);
+                    margin-bottom: 8px;
+                    text-align: start;
+                    
+                }
+                
+                .form_body>div{
+                    color: rgba(0, 0, 0, 0.40);
+                }
+                .form_body>div>a{
+                    color: #000;
+                    font-family: Figtree;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                    margin-left: 3px;
+                }
+            .form_options{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+                .google{
+                    color: black;
+                    background: #FFF;
+                    border-radius: 10px;
+                    border: 1px solid #000;
+                }
+        .right_section{
+            max-width: 50%;
+            flex-grow: 1;
+        }
+            .extra_info_container{
+                background-image: url('./Photo (Ronded).png') ;
+                background-size: cover; 
+                background-position: center center;
+                border-radius: 30px;
+                height: calc(100vh - 40px);
+                position: sticky;
+                top: 20px;
+                
+                text-align: start;
+                max-height: 900px;
+                max-width: 700px;
+
+                
+
+            }
+                .extra_info{
+                    padding: 70px 54px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 100%;
+                }
+
+                    .extra_info>h2{
+                        color: #FFF;
+                        margin: 0;
+                        font-family: Figtree;
+                        font-size: 50px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                    .extra_info>p{
+                        color: #FFF;
+                        flex-grow: 1;
+                        font-family: Figtree;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        max-width: 500px;
+                    }
+                    .extra_info>div>p{
+                        color: #FFF;
+                        flex-grow: 1;
+                        font-family: Figtree;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        max-width: 500px;
+                        margin: 0;
+                    }
+    @media (max-width: 750px) {
+        .right_section{
+            display: none;
+        }
+
+        }   
