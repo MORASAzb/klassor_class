@@ -133,7 +133,7 @@ button{
                 
                 text-align: start;
                 max-height: 900px;
-                max-width: 700px;
+                max-width: 550px;
 
                 
 
@@ -182,9 +182,4 @@ button{
         }
 
         } 
-    @media (max-height: 825px) {
-        .signin_form{
-            padding: calc(200vh - 1605px) 20px calc(300vh - 2405px)
-        }
-        
-            }     
+  
