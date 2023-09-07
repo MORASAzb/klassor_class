@@ -43,8 +43,7 @@ function practiceFour(str) {
     let answer = 0
     array=str.toUpperCase().split("")
     while (array.length != 0) {
-        const toCheck = array[0]
-        array.shift()
+        const toCheck = array.shift()
         if (array.includes(toCheck) ) {
             answer++   
             array=array.filter((value)=> !(value==toCheck)) 
