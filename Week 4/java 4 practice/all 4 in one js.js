@@ -11,6 +11,8 @@ function isNumber(input)
         return !isNaN(number) ;
     }
 
+
+
 function practiceOne(str)
     {      
         let answer = str
@@ -30,14 +32,12 @@ function practiceTwo(array) {
         let like = array.length < 2 ? "likes" : "like"
         const answer = `${names} ${like} this.` 
         return answer
-    
 }
 function practiceThree(array1,array2) {
     const fillteredArray1 =  array1.filter((value => !array2.includes(value)))
     const filteredArray2 = array2.filter((value => !array1.includes(value)))
     answer= [...fillteredArray1,...filteredArray2]
     return answer
-
 }
 function practiceFour(str) {
     let answer = 0
@@ -52,6 +52,9 @@ function practiceFour(str) {
     }
     return answer
 }
+
+
+
 let needToTestMore = true    
 while (needToTestMore) {
     const practiceNumber=prompt("tell me witch practice you wanna test amir (Only digit)?")
