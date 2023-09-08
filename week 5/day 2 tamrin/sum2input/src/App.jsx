@@ -1,23 +1,31 @@
 import { useState } from 'react'
-
 import './App.css'
 
 function App() {
-  const [inputOne, setInputOne] = useState(0)
-  const [inputTwo, setInputTwo] = useState(0)
+  const [inputOne, setInputOne] = useState('');
+  const [inputTwo, setInputTwo] = useState('');
+
   function changeInputOne(event) {
-    setInputOne(Number(event.target.value));
+    setInputOne(event.target.value);
   }
+
   function changeInputTwo(event) {
-    setInputTwo(Number(event.target.value));
+    setInputTwo(event.target.value);
   }
+
+  let sumMessage = 'Please enter values in both fields';
+
+  if (inputOne !== '' && inputTwo !== '') {
+    sumMessage = `Sum is ${Number(inputOne) + Number(inputTwo)}`;
+  }
+
   return (
     <>
-    <input type="number" onChange={changeInputOne} value={inputOne}/>
-    <input type="number"onChange={changeInputTwo} value={inputTwo} />
-    <div>
-       Sum is {inputTwo+inputOne}
-    </div>
+      <input type="number" onChange={changeInputOne} placeholder='first number' value={inputOne} />
+      <input type="number" onChange={changeInputTwo} placeholder='second number' value={inputTwo} />
+      <div>
+        {sumMessage}
+      </div>
     </>
   )
 }
