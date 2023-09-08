@@ -1,9 +1,12 @@
 import './style.css'
+
 const condidates = []
 const pushBtn = document.querySelector('.push')
 const printBtn = document.querySelector('.print')
 const clearBtn = document.querySelector('.clear')
 const printerContainer=document.querySelector('.printer_container')
+
+
 function push() {
   const condidate = document.querySelector('input')
   let message="Pleast first fill the input!"
