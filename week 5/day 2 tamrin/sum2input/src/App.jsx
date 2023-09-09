@@ -5,12 +5,14 @@ function App() {
   const [inputOne, setInputOne] = useState('');
   const [inputTwo, setInputTwo] = useState('');
 
-  function changeInputOne(event) {
-    setInputOne(event.target.value);
-  }
+  function handleInputChange(event) {
+    const { name, value } = event.target;
 
-  function changeInputTwo(event) {
-    setInputTwo(event.target.value);
+    if (name === 'inputOne') {
+      setInputOne(value);
+    } else if (name === 'inputTwo') {
+      setInputTwo(value);
+    }
   }
 
   let sumMessage = 'Please enter values in both fields';
@@ -21,8 +23,20 @@ function App() {
 
   return (
     <>
-      <input type="number" onChange={changeInputOne} placeholder='first number' value={inputOne} />
-      <input type="number" onChange={changeInputTwo} placeholder='second number' value={inputTwo} />
+      <input
+        type="number"
+        name="inputOne"
+        onChange={handleInputChange}
+        placeholder='first number'
+        value={inputOne}
+      />
+      <input
+        type="number"
+        name="inputTwo"
+        onChange={handleInputChange}
+        placeholder='second number'
+        value={inputTwo}
+      />
       <div>
         {sumMessage}
       </div>
