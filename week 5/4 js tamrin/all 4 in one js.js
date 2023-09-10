@@ -1,18 +1,18 @@
 // You can test all te practic interactivly with opening html file
-
+function isPositiveNumber(input) 
+    {
+        const number = parseFloat(input);
+        return !isNaN(number) && number > 0;
+    }
 function isNumber(input) 
     {
         const number = parseFloat(input);
         return !isNaN(number) ;
     }
-
-
-
 function practiceOne(str)
     {      
         let answer
         const inputArray = str.split(" ")
-        //[1asd,asd2,7sad,8asd,5asd]
         let answerArray=[]
         for (let index = 1; index < 10; index++) {
             const indexFiltered = inputArray.filter( (value)=> value.split("").includes(String(index)))
@@ -24,30 +24,19 @@ function practiceOne(str)
 
 function practiceTwo(str) {
         const inputNum=Number(str)
-        let hours = Math.floor(inputNum / (60*60))
-        if (hours < 10) {
-            hours ="0"+ String(hours)
-        }
-        let minutes= Math.floor((inputNum - (hours*3600))/ 60)
-        if (minutes < 10) {
-            minutes= "0"+String(minutes)   
-        }
-        let seconds = inputNum -(hours*3600) - (minutes*60)
-        if (seconds < 10){
-            seconds = "0"+String(seconds) 
-        }
-        let answer = `${hours}:${minutes}:${seconds}`
-
+        const hours = Math.floor(inputNum / (60*60))
+        const minutes= Math.floor((inputNum - (hours*3600))/ 60)
+        const seconds = inputNum -(hours*3600) - (minutes*60)
+        const answer = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
         return answer
 }
 function practiceThree(str) {
         const inputArray=str.split(",").map((value => value.trim())).map((value => value>255? 255:value)).map((value => value<0? 0:value))
         const HexaArray = inputArray.map((value) => Number(value).toString(16).padStart(2, '0'))
-        let answer = "#"+HexaArray.join("").toUpperCase()
+        const answer = "#"+HexaArray.join("").toUpperCase()
     return answer
 }
 function practiceFour(str) {
-    //"asdasdasd"
     const inputArray=str.split("")
     let lastString=inputArray.length -1
     for (let index = inputArray.length-1; index >-1 ; index--) {
@@ -57,18 +46,11 @@ function practiceFour(str) {
             lastString = index
             break
         }
-        
     }
-    let digitPart = str.substring(lastString+1,inputArray.length)
-    let stringPart=str.substring(0, lastString+1)
-    let stringAnswer = stringPart
-    let digitAnswer= +digitPart +1
-
-    const lenghtOfDigit =inputArray.length- lastString -1
-    while (!(String(digitPart).length == String(digitAnswer).length) && String(digitPart).length != 0 ) {
-        digitAnswer = "0"+ digitAnswer
-    }
-    const answer = stringAnswer + digitAnswer
+    const digitPart = str.substring(lastString+1,inputArray.length)
+    const stringPart=str.substring(0, lastString+1)
+    const digitAnswer= +digitPart +1
+    const answer = stringPart + String(digitAnswer).padStart(digitPart.length, '0')
     return answer
 }
 
