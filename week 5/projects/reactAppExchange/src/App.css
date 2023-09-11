@@ -1,0 +1,41 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.container{
+  max-width: 500px;
+  margin: auto;
+  background-color: blueviolet;
+  border-radius: 10px;
+  padding: 10px 5px 5px;
+}
+  .band{
+    padding: 1px;
+    background-color: red;
+  }
+  .rate{
+    margin-top: 20px;
+  }
+  .date{
+    margin: 20px 0;
+  }
+  .inputrow{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 5px 0;
+  }
+    .inputrow>input , select{
+      width: 45%;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      background-color: aliceblue;
+      color: black;
+    }
+
+
+
+
