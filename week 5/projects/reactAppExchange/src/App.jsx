@@ -1,12 +1,15 @@
 import { useState } from 'react'
-
 import './App.css'
 
 function App() {
-  const [currencyFromInput, setFirstCurrency] = useState(0)
-  const [currencyToInput, setsecondCurrency] = useState(0)
+  const [currencyFromValue, setCurrencyFromValue] = useState(0)
+  const [currencyToValue, setCurrencyToValue] = useState(0)
   const [currencyFrom, setcurrencyFrom] = useState('USD')
   const [currencyTo, setcurrencyTo] = useState('RIAL')
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+
+
   const ConvertorRate={
     RIAL:{
       USD : 1/50000,
@@ -26,37 +29,38 @@ function App() {
       RIAL :40000
     }
   }
+  const fixedNum = {USD:2,CAD:2,RIAL:0}
 
 function seletedCurrencyHandleChange(event) {
         if (event.target.name == "currency-from"){
           setcurrencyFrom(event.target.value)
-          const newevent= {target:{name:'currency-from-value',value:1}}
-          const rate = ConvertorRate[event.target.value][currencyTo]
-          changeInputHandler(newevent,rate)
         }
         else{
           setcurrencyTo(event.target.value)
-          const newevent= {target:{name:'currency-to-value',value:1}}
-          const rate = ConvertorRate[currencyFrom][event.target.value]
-          changeInputHandler(newevent,rate)
         }
-}
-function changeInputHandler(event,rate) {
-  const { name, value } = event.target;
-  if (rate ==undefined) {
-    rate=ConvertorRate[currencyFrom][currencyTo]
-  }
-  
-  if (name === 'currency-from-value') {
+        setCurrencyFromValue(0);
+        setCurrencyToValue(0)
 
-    setFirstCurrency(value);
-    setsecondCurrency((value*rate).toFixed(2))
+}
+
+function changeInputHandler(event) {
+  const { name, value } = event.target;
+  if (name === 'currency-from-value') {
+    setCurrencyFromValue(value);
+    setCurrencyToValue((value*rate).toFixed(fixedNum[currencyTo]))
 
   } else if (name === 'currency-to-value') {
-    setsecondCurrency(value)
-    setFirstCurrency((value*(1/rate)).toFixed(2))
+    setCurrencyToValue(value)
+    setCurrencyFromValue((value*(1/rate)).toFixed(fixedNum[currencyFrom]))
   }     
 }
+
+let rate = ConvertorRate[currencyFrom][currencyTo]
+const timerInterval = setInterval(() => {
+  setCurrentTime(new Date());
+}, 1000); 
+
+
   return (
     <>
     <div className="container">
@@ -67,21 +71,23 @@ function changeInputHandler(event,rate) {
 
       </div>
       <div className='rate'>
-        1 USD = 5.400 BRL
+        1 {currencyFrom} = {rate} {currencyTo}
       </div>
       <div className="date">
-        Currency quote day : felan
+        Currency quote day : {currentTime.toLocaleTimeString()}
       </div>
       <div className="inputrow">
-        <input type="number" name="currency-from-value" onChange={changeInputHandler} value={currencyFromInput}/>
+        <input type="number" name="currency-from-value" onChange={changeInputHandler} value={currencyFromValue} />
+        
         <select name="currency-from" value={currencyFrom} onChange={seletedCurrencyHandleChange} >
           <option value="USD" >USD</option>
           <option value="RIAL" >RIAL</option>
           <option value="CAD">CAD</option>
         </select>
       </div>
+
       <div className="inputrow">
-        <input type="number" name="currency-to-value" onChange={changeInputHandler} value={currencyToInput} />
+        <input type="number" name="currency-to-value" onChange={changeInputHandler} value={currencyToValue} />
         <select name="currency-to"value={currencyTo} onChange={seletedCurrencyHandleChange} >
           <option value="USD" >USD</option>
           <option value="RIAL" >RIAL</option>
@@ -89,6 +95,7 @@ function changeInputHandler(event,rate) {
       </select>
       </div>
     </div>
+    
     </>
   )
 }

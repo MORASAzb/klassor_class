@@ -7,9 +7,9 @@
 .container{
   max-width: 500px;
   margin: auto;
-  background-color: blueviolet;
+  background-color: rgb(215, 182, 247);
   border-radius: 10px;
-  padding: 10px 5px 5px;
+  padding: 10px 5px 20px;
 }
   .band{
     padding: 1px;
@@ -34,6 +34,7 @@
       border: none;
       background-color: aliceblue;
       color: black;
+      padding: 0 10px;
     }
 
 
