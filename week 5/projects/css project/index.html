@@ -309,6 +309,7 @@
                             display: flex;
                             justify-content: center;
                         }
+
                         @media screen and (max-width : 2010px) {
 
                             .stat>h3{
@@ -370,6 +371,16 @@
                                         font-size: 5vw;
                                     }
                         }
+                        @media screen and (min-width : 1800px) {
+
+                            .stat>h3{
+                                font-size: 128px;
+                            }
+                            .stat>p{
+                                font-size: 36px;
+                                letter-spacing: -1.8px;
+                            }
+                            }
                 .portfolio{
 
                 }
@@ -528,6 +539,8 @@
                                 line-height: 100%; /* 36px */
                                 letter-spacing: -1.8px;
                                 margin: 0;
+                               
+
                             }
                             .skill-info>p{
                                 color: var(--main-colors-gray-4, #292929);
@@ -537,7 +550,81 @@
                                 font-weight: 400;
                                 line-height: 100%; /* 20px */
                                 letter-spacing: -1px;
+                              
                             }
+                            .skill-icon{
+                                    width: 220px;
+                                    flex-shrink:0;
+                                    
+                                    }
+                            @media screen and (max-width : 1500px) and (min-width:1000px) {
+                                
+                                    .skill-info>p{
+                                    font-size: 2.1vw;
+
+
+                                }
+                            }
+                            @media screen and (max-width : 400px) {
+                                .skill-info>h5{
+                                    font-size: 10vw;
+                                    }
+                                    .skill-info>p{
+                                    font-size: 5vw;
+                                    }
+                                    .skill-card{
+                                        padding: 40px 5vw 60px ;
+                                    }
+                                    .skill-icon{
+                                        width: 50vw;
+                                    }
+
+                                }
+                .comments{
+                    background-position: start center;
+                    background: url(./9f8cdef62d5db5b95a61f7244197b95d.jfif), lightgray 50% / cover no-repeat;
+                    background-position: left;
+                    padding: calc(50px + 10vw) 5vw ;
+                    margin-top: calc(10vw + 30px);
+                }
+                    .comment{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 60px;
+                        max-width: 1250px;
+                        margin: auto;
+
+                    }
+                    .comment>p{
+                        color: var(--White, #FFF);
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 48px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 105%; 
+                        
+                        margin: 0;
+                        
+                    }  
+                    @media screen and (min-width : 1700px) {
+                        .comments{
+                                    margin-top: 200px;
+                                    padding: 140px ;
+                                }
+
+                                }
+                    @media screen and (max-width : 1000px) {
+                        .comments{
+                                    
+                                }
+                        .comment>p{
+                            font-size: 5vw;
+                        }
+
+                                }              
 
                                                     
                     
@@ -912,7 +999,7 @@
             <div class="skill-cards">
                 <div class="skill-card">
                     <div class="skill-icon">
-                                                <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="100%" height="100%" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                            
 
                             <rect x="-77.5" y="-39.5" width="385" height="535" rx="9.5" fill="white"/>
@@ -933,7 +1020,7 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon" style="border:none">
-                        <svg width="221" height="220" viewBox="0 0 221 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="100%" height="100%"  viewBox="0 0 221 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Landing Light/ Web">
                             <g clip-path="url(#clip0_1_5809)">
                             <rect x="-138" y="-3335" width="1728" height="7045" fill="white"/>
@@ -980,7 +1067,7 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="100%" height="100%"  viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                            
 
                             <rect x="-77.5" y="-39.5" width="385" height="535" rx="9.5" fill="white"/>
@@ -1001,7 +1088,7 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="100%" height="100%"  viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                            
 
                             <rect x="-77.5" y="-39.5" width="385" height="535" rx="9.5" fill="white"/>
@@ -1021,6 +1108,20 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="comments">
+                <div class="comment">
+                    <p>
+                        Kaleb Lechtenberg
+                    </p>
+                    <p>
+                        "Working with this freelancer has been great. His attention to detail is unparalleled and finished all work ahead of schedule. Will gladly send more work and I do not hesitate to recommend him to you on your project also."
+                    </p>
+                    
+                    <svg width="72" height="86" viewBox="0 0 72 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Shield 1" d="M71.0158 10.6128C49.7908 10.6128 35.9486 0 35.9486 0C35.9486 0 22.1064 10.6128 1.06636 10.6128C1.06636 10.6128 -1.33295 44.281 1.06636 55.9915C3.2811 66.9702 35.9486 86 35.9486 86C35.9486 86 68.6164 66.9702 71.0158 55.9915C73.2303 44.4637 71.0158 10.6128 71.0158 10.6128Z" fill="white"/>
+                        </svg>
+                </div>
         </div>
 
 
