@@ -6,19 +6,19 @@
     <title>Css project Responsive</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');        
-    @font-face {
-    font-family: 'Gotham'; /* You can choose a name for your font */
-    src: url('./Gotham-Font/GothamBook.ttf') format('truetype'); /* TTF font format */
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GothamBlack'; /* You can choose a name for your font */
-    src: url('./Gotham-Font/Gotham-Black.otf') format('truetype'); /* TTF font format */
-    font-weight: normal;
-    font-style: normal;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');        
+        @font-face {
+            font-family: 'Gotham'; 
+            src: url('./Gotham-Font/GothamBook.ttf') format('truetype'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GothamBlack'; 
+            src: url('./Gotham-Font/Gotham-Black.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         *{
             font-family: Gotham;
             box-sizing: border-box;
@@ -311,8 +311,7 @@
                             .stat>p{
                                 font-size: 2vw;
                             }
-                    }
-                        
+                        }
                         @media screen and (max-width : 1410px) {
                             .dawn{
                                 display: none;
@@ -322,41 +321,49 @@
                             }
                             .stat>h3{
                                 font-size: 6.5vw;
+                            /*color: var(--main-colors-green-7, #64C661); this shouldnt apply in my opinion cause make it ugly but in design it's there*/
+
                             }
                             .stat>p{
                                 font-size: 2.2vw;
+                            /*color: var(--main-colors-green-7, #64C661); this shouldnt apply in my opinion cause make it ugly but indesign it's there*/
+
                             }
                             .stats{
     
                             padding:  82px 50px;
                         }
-                    }
-                    @media screen and (max-width : 1000px) {
-                            .stat>h3{
-                                font-size: 14vw;
-                            }
-                            .stat>p{
-                                font-size: 6vw;
-                            }
-                            .stats{
-                                flex-direction: column;
-                                gap: 140px;
-                                padding:  82px 50px;
                         }
+                        @media screen and (max-width : 1000px) {
+                                .stat>h3{
+                                    font-size: 14vw;
+                                }
+                                .stat>p{
+                                    font-size: 6vw;
+                                }
+                                .stats{
+                                    flex-direction: column;
+                                    gap: 140px;
+                                    padding:  82px 50px;
+                            }
 
-                    }
-                    @media screen and (max-width : 600px) {
-                            .stat>h3{
-                                font-size: 18vw;
+                        }
+                        @media screen and (max-width : 600px) {
+                            .stats{
+                                gap: 25vw;
+                                padding:  50px;
                             }
-                            .stat>p{
-                                font-size: 7vw;
-                            }
-                    }
-     
-        
-      
-      
+                                    .stat{
+                                        gap: 3vw;
+                                    }
+                               
+                                    .stat>h3{
+                                        font-size: 18vw;
+                                    }
+                                    .stat>p{
+                                        font-size: 5vw;
+                                    }
+                        }
         .padding-x{
                 max-width: 1728px;
                 margin: auto;
@@ -367,7 +374,7 @@
                     padding-right:10vw ;
                     }
             }
-            .stats-container{
+        .stats-container{
                     margin-top: calc(1vw + 50px) ;
                 }
                         
