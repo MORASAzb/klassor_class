@@ -19,6 +19,12 @@
             font-weight: normal;
             font-style: normal;
         }
+        @font-face {
+            font-family: 'GothamBold'; 
+            src: url('./Gotham-Font/GothamBold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         *{
             font-family: Gotham;
             box-sizing: border-box;
@@ -364,6 +370,177 @@
                                         font-size: 5vw;
                                     }
                         }
+                .portfolio{
+
+                }
+                    .portfolio>h4{
+                        color: var(--main-colors-gray-10, #000);
+                        font-family: Anton;
+                        font-size: 64px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%; /* 64px */
+                        text-transform: uppercase;
+                        margin: calc(5% + 50px) 0 36px 0;
+                    }
+                    .cards{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        justify-content: center;
+                        gap: 30px;
+                        @media screen and (max-width : 1600px){
+                                grid-template-columns: 1fr 1fr 1fr;
+                                }
+                                @media screen and (max-width : 1250px){
+                                grid-template-columns: 1fr 1fr ;
+                                }
+                                @media screen and (max-width : 730px){
+                                grid-template-columns: 1fr ;
+                                }
+
+
+                            }
+
+                    
+                        .card{
+                            border-radius: 10px;
+                            border: 1px solid var(--main-colors-gray-10, #000);
+                            background: var(--White, #FFF);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: start;
+                            padding: 30px;
+
+                        }
+                        .special-card{
+                            display: none;
+                            @media screen and (max-width : 1600px) and (min-width : 1250px){
+                                display: block;
+                                }
+
+                        }
+                        
+                            .card>h5{
+                                color: var(--main-colors-gray-4, #292929);
+                                margin: 21px 0 0 0;
+                                font-family: GothamBold;
+                                font-size: 28px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 100%;
+                                letter-spacing: -1.4px;
+                            }
+                            .extra-card{
+                            
+                            @media screen and (max-width : 730px) {
+                                display: none;
+                                }
+                        }
+                            .card-image{
+                                width: 100%;
+                            }
+                            .card-image>img{
+                                width: 100%;
+                                height: 200px;
+                                border-radius: 10px;
+                                
+                            }
+                                .tags{
+                                    display: flex;
+                                    gap: 8px;
+                                    margin: 21px 0px;
+                                    justify-content: start;
+                                }
+                                    .tag{
+                                        border-radius: 12px;
+                                        border: 1px solid var(--main-colors-purple-3, #784DC7);
+                                        background: var(--main-colors-purple-1, #E9DFFC);
+                                        color: var(--main-colors-purple-6, #784DC7);
+                                        font-family: Gotham;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 100%;
+                                        letter-spacing: -0.7px;
+                                        padding: 4px 8px;
+                                        @media screen and (max-width : 900px){
+                                            font-size: 1.5vw;
+                                            @media screen and (max-width : 730px){
+                                                font-size: 2.8vw 
+                                        }
+                                        }
+                                        
+                                    }
+                                .card>button{
+                                    color: var(--White, #FFF);
+                                    font-family: Gotham;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 100%; /* 16px */
+                                    letter-spacing: -0.8px;
+                                    text-transform: capitalize;
+                                    background: var(--main-colors-gray-4, #292929);
+                                    border: none;
+                                    padding: 12px 24px;
+                                    width: 100%;
+                                }
+                .skills>h4{
+                    color: var(--main-colors-gray-10, #000);
+                    font-family: Anton;
+                    font-size: 64px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    margin: calc(5% + 50px) 0 36px 0;
+                    }
+                    .skill-cards{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+                        @media screen and (max-width : 1500px) {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                        .skill-card{
+                            display: flex;
+                            align-items: center;
+                            border-radius: 10px;
+                            border: 1px solid var(--main-colors-gray-15, #737373);
+                            
+                            padding: 40px 50px 60px 40px;
+                            gap: 20px;
+                            @media screen and (max-width : 960px) {
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                        }
+                        }
+                            .skill-info>h5{
+                                color: var(--main-colors-gray-4, #292929);
+                                font-family: GothamBlack;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 100%; /* 36px */
+                                letter-spacing: -1.8px;
+                                margin: 0;
+                            }
+                            .skill-info>p{
+                                color: var(--main-colors-gray-4, #292929);
+                                font-family: Gotham;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 100%; /* 20px */
+                                letter-spacing: -1px;
+                            }
+
+                                                    
+                    
         .padding-x{
                 max-width: 1728px;
                 margin: auto;
@@ -523,8 +700,330 @@
                 </div>
             </div>
         </div>
+        <div class="portfolio padding-x">
+            <h4>
+                PORTFOLIO
+            </h4>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card extra-card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card extra-card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card extra-card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card extra-card">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+                <div class="card special-card ">
+                    <div class="card-image">
+                        <img src=".\ea31398419fd2d7b1e650efec70074ee.jfif" alt="">
+                    </div>
+                    <h5>
+                        Mi portal U
+                    </h5>
+                    <div class="tags">
+                        <div class="tag">
+                            UX Design
+                        </div>
+                        <div class="tag">
+                            University
+                        </div>
+                        <div class="tag">
+                            JavaScript
+                        </div>
+                    </div>
+                    <button>
+                        Figma community 
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="skills padding-x">
+            <h4>
+                skills
+            </h4>
+            <div class="skill-cards">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                                                <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+
+                            <rect x="-77.5" y="-39.5" width="385" height="535" rx="9.5" fill="white"/>
+                            
+                            <path id="Ellipse 7" d="M43.8855 176.114C37.4419 182.558 26.8757 182.619 21.4674 175.284C8.12684 157.193 0.566315 135.327 0.0305328 112.592C-0.635662 84.3227 9.60998 56.883 28.6406 35.9686C47.6712 15.0543 74.0249 2.2718 102.231 0.274693C130.437 -1.72241 158.329 7.21927 180.117 25.2435C201.904 43.2678 215.914 68.9901 219.238 97.0709C222.561 125.152 214.943 153.434 197.965 176.046C180.987 198.659 155.954 213.865 128.061 218.507C105.628 222.241 82.7316 218.912 62.4613 209.198C54.2436 205.259 52.3231 194.869 57.4452 187.332C62.5673 179.795 72.7985 178.031 81.2524 181.433C94.2755 186.673 108.589 188.294 122.642 185.955C142.168 182.705 159.691 172.061 171.576 156.232C183.46 140.404 188.793 120.606 186.466 100.95C184.14 81.2931 174.333 63.2875 159.082 50.6705C143.83 38.0535 124.306 31.7943 104.562 33.1923C84.8174 34.5903 66.3698 43.538 53.0484 58.178C39.727 72.8181 32.555 92.0259 33.0214 111.814C33.357 126.057 37.6313 139.813 45.2195 151.624C50.1453 159.29 50.3292 169.671 43.8855 176.114Z" fill="url(#paint0_linear_1_5809)"/>
+                            <path id="97%" d="M82.692 124.504C90.252 124.504 94.356 118.888 94.356 110.644V110.572C94.356 105.928 93.168 103.048 91.332 101.248C89.424 99.34 87.264 98.296 83.592 98.296C77.832 98.296 73.548 101.896 73.548 107.476V107.548C73.548 112.48 77.112 115.504 82.008 115.504C84.24 115.504 86.04 114.676 87.336 113.452C87.012 116.692 85.464 118.708 82.584 118.708C80.568 118.708 78.912 118.06 77.184 116.692L73.908 121.516C76.212 123.316 78.948 124.504 82.692 124.504ZM83.916 110.5C81.72 110.5 80.316 109.096 80.316 107.188V107.116C80.316 105.172 81.648 103.732 83.844 103.732C86.04 103.732 87.444 105.208 87.444 107.152V107.224C87.444 109.06 86.112 110.5 83.916 110.5ZM95.7406 124H103.445L114.569 104.056V98.8H95.1646V104.668H106.829L95.7406 124ZM121.562 112.012C125.45 112.012 128.078 108.952 128.078 105.244V105.172C128.078 101.5 125.522 98.44 121.598 98.44C117.638 98.44 115.082 101.5 115.082 105.208V105.28C115.082 108.988 117.674 112.012 121.562 112.012ZM117.854 124H122.714L142.154 98.8H137.294L117.854 124ZM138.41 124.36C142.298 124.36 144.926 121.264 144.926 117.592V117.52C144.926 113.812 142.37 110.788 138.446 110.788C134.486 110.788 131.93 113.848 131.93 117.556V117.628C131.93 121.3 134.522 124.36 138.41 124.36ZM121.598 108.052C120.41 108.052 119.474 106.864 119.474 105.244V105.172C119.474 103.588 120.302 102.4 121.562 102.4C122.786 102.4 123.686 103.624 123.686 105.208V105.28C123.686 106.864 122.822 108.052 121.598 108.052ZM138.446 120.4C137.258 120.4 136.322 119.176 136.322 117.592V117.52C136.322 115.9 137.114 114.748 138.41 114.748C139.634 114.748 140.534 115.936 140.534 117.556V117.628C140.534 119.212 139.67 120.4 138.446 120.4Z" fill="#292929"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="skill-info">
+                        <h5>
+                            UX Design
+                        </h5>
+                        <p>
+                            UI design is the process of designing the visual and interactive elements of a user interface, such as buttons, icons, and layout, to create an intuitive and pleasing experience for users.
+                        </p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" style="border:none">
+                        <svg width="221" height="220" viewBox="0 0 221 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Landing Light/ Web">
+                            <g clip-path="url(#clip0_1_5809)">
+                            <rect x="-138" y="-3335" width="1728" height="7045" fill="white"/>
+                            <g id="Frame 26">
+                            <g id="Frame 30">
+                            <g id="Frame 21">
+                            <g id="Frame 20">
+                            <g id="Frame 6">
+                            <rect x="-39" y="-39.5" width="754.5" height="319" rx="9.5" fill="white"/>
+                            <g id="Graph">
+                            <g id="Graph_2">
+                            <path id="Ellipse 6" d="M220.5 110C220.5 170.751 171.251 220 110.5 220C49.7487 220 0.5 170.751 0.5 110C0.5 49.2487 49.7487 0 110.5 0C171.251 0 220.5 49.2487 220.5 110ZM33.5 110C33.5 152.526 67.9741 187 110.5 187C153.026 187 187.5 152.526 187.5 110C187.5 67.4741 153.026 33 110.5 33C67.9741 33 33.5 67.4741 33.5 110Z" fill="white"/>
+                            <path id="Ellipse 7" d="M44.3855 176.114C37.9419 182.558 27.3757 182.619 21.9674 175.284C8.62684 157.193 1.06631 135.327 0.530533 112.592C-0.135662 84.3227 10.11 56.883 29.1406 35.9686C48.1712 15.0543 74.5249 2.2718 102.731 0.274693C130.937 -1.72241 158.829 7.21927 180.617 25.2435C202.404 43.2678 216.414 68.9901 219.738 97.0709C223.061 125.152 215.443 153.434 198.465 176.046C181.487 198.659 156.454 213.865 128.561 218.507C106.128 222.241 83.2316 218.912 62.9613 209.198C54.7436 205.259 52.8231 194.869 57.9452 187.332C63.0673 179.795 73.2985 178.031 81.7524 181.433C94.7755 186.673 109.089 188.294 123.142 185.955C142.668 182.705 160.191 172.061 172.076 156.232C183.96 140.404 189.293 120.606 186.966 100.95C184.64 81.2931 174.833 63.2875 159.582 50.6705C144.33 38.0535 124.806 31.7943 105.062 33.1923C85.3174 34.5903 66.8698 43.538 53.5484 58.178C40.227 72.8181 33.055 92.0259 33.5214 111.814C33.857 126.057 38.1313 139.813 45.7195 151.624C50.6453 159.29 50.8292 169.671 44.3855 176.114Z" fill="url(#paint0_linear_1_5809)"/>
+                            </g>
+                            <path id="97%" d="M83.192 124.504C90.752 124.504 94.856 118.888 94.856 110.644V110.572C94.856 105.928 93.668 103.048 91.832 101.248C89.924 99.34 87.764 98.296 84.092 98.296C78.332 98.296 74.048 101.896 74.048 107.476V107.548C74.048 112.48 77.612 115.504 82.508 115.504C84.74 115.504 86.54 114.676 87.836 113.452C87.512 116.692 85.964 118.708 83.084 118.708C81.068 118.708 79.412 118.06 77.684 116.692L74.408 121.516C76.712 123.316 79.448 124.504 83.192 124.504ZM84.416 110.5C82.22 110.5 80.816 109.096 80.816 107.188V107.116C80.816 105.172 82.148 103.732 84.344 103.732C86.54 103.732 87.944 105.208 87.944 107.152V107.224C87.944 109.06 86.612 110.5 84.416 110.5ZM96.2406 124H103.945L115.069 104.056V98.8H95.6646V104.668H107.329L96.2406 124ZM122.062 112.012C125.95 112.012 128.578 108.952 128.578 105.244V105.172C128.578 101.5 126.022 98.44 122.098 98.44C118.138 98.44 115.582 101.5 115.582 105.208V105.28C115.582 108.988 118.174 112.012 122.062 112.012ZM118.354 124H123.214L142.654 98.8H137.794L118.354 124ZM138.91 124.36C142.798 124.36 145.426 121.264 145.426 117.592V117.52C145.426 113.812 142.87 110.788 138.946 110.788C134.986 110.788 132.43 113.848 132.43 117.556V117.628C132.43 121.3 135.022 124.36 138.91 124.36ZM122.098 108.052C120.91 108.052 119.974 106.864 119.974 105.244V105.172C119.974 103.588 120.802 102.4 122.062 102.4C123.286 102.4 124.186 103.624 124.186 105.208V105.28C124.186 106.864 123.322 108.052 122.098 108.052ZM138.946 120.4C137.758 120.4 136.822 119.176 136.822 117.592V117.52C136.822 115.9 137.614 114.748 138.91 114.748C140.134 114.748 141.034 115.936 141.034 117.556V117.628C141.034 119.212 140.17 120.4 138.946 120.4Z" fill="#292929"/>
+                            </g>
+                            <rect x="-39" y="-39.5" width="754.5" height="319" rx="9.5" stroke="#737373"/>
+                            </g>
+                            </g>
+                            </g>
+                            </g>
+                            </g>
+                            </g>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_1_5809" x1="0.5" y1="110" x2="220.5" y2="110" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FA709A"/>
+                            <stop offset="1" stop-color="#FEE140"/>
+                            </linearGradient>
+                            <clipPath id="clip0_1_5809">
+                            <rect x="-138" y="-3335" width="1728" height="7045" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    </div>
+                    <div class="skill-info">
+                        <h5>
+                            UI Design
+                        </h5>
+                        <p>
+                            UI design is the process of designing the visual and interactive elements of a user interface, such as buttons, icons, and layout, to create an intuitive and pleasing experience for users.
+                        </p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+
+                            <rect x="-77.5" y="-39.5" width="385" height="535" rx="9.5" fill="white"/>
+                            
+                            <path id="Ellipse 7" d="M43.8855 176.114C37.4419 182.558 26.8757 182.619 21.4674 175.284C8.12684 157.193 0.566315 135.327 0.0305328 112.592C-0.635662 84.3227 9.60998 56.883 28.6406 35.9686C47.6712 15.0543 74.0249 2.2718 102.231 0.274693C130.437 -1.72241 158.329 7.21927 180.117 25.2435C201.904 43.2678 215.914 68.9901 219.238 97.0709C222.561 125.152 214.943 153.434 197.965 176.046C180.987 198.659 155.954 213.865 128.061 218.507C105.628 222.241 82.7316 218.912 62.4613 209.198C54.2436 205.259 52.3231 194.869 57.4452 187.332C62.5673 179.795 72.7985 178.031 81.2524 181.433C94.2755 186.673 108.589 188.294 122.642 185.955C142.168 182.705 159.691 172.061 171.576 156.232C183.46 140.404 188.793 120.606 186.466 100.95C184.14 81.2931 174.333 63.2875 159.082 50.6705C143.83 38.0535 124.306 31.7943 104.562 33.1923C84.8174 34.5903 66.3698 43.538 53.0484 58.178C39.727 72.8181 32.555 92.0259 33.0214 111.814C33.357 126.057 37.6313 139.813 45.2195 151.624C50.1453 159.29 50.3292 169.671 43.8855 176.114Z" fill="url(#paint0_linear_1_5809)"/>
+                            <path id="97%" d="M82.692 124.504C90.252 124.504 94.356 118.888 94.356 110.644V110.572C94.356 105.928 93.168 103.048 91.332 101.248C89.424 99.34 87.264 98.296 83.592 98.296C77.832 98.296 73.548 101.896 73.548 107.476V107.548C73.548 112.48 77.112 115.504 82.008 115.504C84.24 115.504 86.04 114.676 87.336 113.452C87.012 116.692 85.464 118.708 82.584 118.708C80.568 118.708 78.912 118.06 77.184 116.692L73.908 121.516C76.212 123.316 78.948 124.504 82.692 124.504ZM83.916 110.5C81.72 110.5 80.316 109.096 80.316 107.188V107.116C80.316 105.172 81.648 103.732 83.844 103.732C86.04 103.732 87.444 105.208 87.444 107.152V107.224C87.444 109.06 86.112 110.5 83.916 110.5ZM95.7406 124H103.445L114.569 104.056V98.8H95.1646V104.668H106.829L95.7406 124ZM121.562 112.012C125.45 112.012 128.078 108.952 128.078 105.244V105.172C128.078 101.5 125.522 98.44 121.598 98.44C117.638 98.44 115.082 101.5 115.082 105.208V105.28C115.082 108.988 117.674 112.012 121.562 112.012ZM117.854 124H122.714L142.154 98.8H137.294L117.854 124ZM138.41 124.36C142.298 124.36 144.926 121.264 144.926 117.592V117.52C144.926 113.812 142.37 110.788 138.446 110.788C134.486 110.788 131.93 113.848 131.93 117.556V117.628C131.93 121.3 134.522 124.36 138.41 124.36ZM121.598 108.052C120.41 108.052 119.474 106.864 119.474 105.244V105.172C119.474 103.588 120.302 102.4 121.562 102.4C122.786 102.4 123.686 103.624 123.686 105.208V105.28C123.686 106.864 122.822 108.052 121.598 108.052ZM138.446 120.4C137.258 120.4 136.322 119.176 136.322 117.592V117.52C136.322 115.9 137.114 114.748 138.41 114.748C139.634 114.748 140.534 115.936 140.534 117.556V117.628C140.534 119.212 139.67 120.4 138.446 120.4Z" fill="#292929"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="skill-info">
+                        <h5>
+                            Information Architecture
+                        </h5>
+                        <p>
+                            Information architecture is the design of the structure and organization of content on a website or digital product to make it easy for users to navigate and understand.
+                        </p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           
+
+                            <rect x="-77.5" y="-39.5" width="385" height="535" rx="9.5" fill="white"/>
+                            
+                            <path id="Ellipse 7" d="M43.8855 176.114C37.4419 182.558 26.8757 182.619 21.4674 175.284C8.12684 157.193 0.566315 135.327 0.0305328 112.592C-0.635662 84.3227 9.60998 56.883 28.6406 35.9686C47.6712 15.0543 74.0249 2.2718 102.231 0.274693C130.437 -1.72241 158.329 7.21927 180.117 25.2435C201.904 43.2678 215.914 68.9901 219.238 97.0709C222.561 125.152 214.943 153.434 197.965 176.046C180.987 198.659 155.954 213.865 128.061 218.507C105.628 222.241 82.7316 218.912 62.4613 209.198C54.2436 205.259 52.3231 194.869 57.4452 187.332C62.5673 179.795 72.7985 178.031 81.2524 181.433C94.2755 186.673 108.589 188.294 122.642 185.955C142.168 182.705 159.691 172.061 171.576 156.232C183.46 140.404 188.793 120.606 186.466 100.95C184.14 81.2931 174.333 63.2875 159.082 50.6705C143.83 38.0535 124.306 31.7943 104.562 33.1923C84.8174 34.5903 66.3698 43.538 53.0484 58.178C39.727 72.8181 32.555 92.0259 33.0214 111.814C33.357 126.057 37.6313 139.813 45.2195 151.624C50.1453 159.29 50.3292 169.671 43.8855 176.114Z" fill="url(#paint0_linear_1_5809)"/>
+                            <path id="97%" d="M82.692 124.504C90.252 124.504 94.356 118.888 94.356 110.644V110.572C94.356 105.928 93.168 103.048 91.332 101.248C89.424 99.34 87.264 98.296 83.592 98.296C77.832 98.296 73.548 101.896 73.548 107.476V107.548C73.548 112.48 77.112 115.504 82.008 115.504C84.24 115.504 86.04 114.676 87.336 113.452C87.012 116.692 85.464 118.708 82.584 118.708C80.568 118.708 78.912 118.06 77.184 116.692L73.908 121.516C76.212 123.316 78.948 124.504 82.692 124.504ZM83.916 110.5C81.72 110.5 80.316 109.096 80.316 107.188V107.116C80.316 105.172 81.648 103.732 83.844 103.732C86.04 103.732 87.444 105.208 87.444 107.152V107.224C87.444 109.06 86.112 110.5 83.916 110.5ZM95.7406 124H103.445L114.569 104.056V98.8H95.1646V104.668H106.829L95.7406 124ZM121.562 112.012C125.45 112.012 128.078 108.952 128.078 105.244V105.172C128.078 101.5 125.522 98.44 121.598 98.44C117.638 98.44 115.082 101.5 115.082 105.208V105.28C115.082 108.988 117.674 112.012 121.562 112.012ZM117.854 124H122.714L142.154 98.8H137.294L117.854 124ZM138.41 124.36C142.298 124.36 144.926 121.264 144.926 117.592V117.52C144.926 113.812 142.37 110.788 138.446 110.788C134.486 110.788 131.93 113.848 131.93 117.556V117.628C131.93 121.3 134.522 124.36 138.41 124.36ZM121.598 108.052C120.41 108.052 119.474 106.864 119.474 105.244V105.172C119.474 103.588 120.302 102.4 121.562 102.4C122.786 102.4 123.686 103.624 123.686 105.208V105.28C123.686 106.864 122.822 108.052 121.598 108.052ZM138.446 120.4C137.258 120.4 136.322 119.176 136.322 117.592V117.52C136.322 115.9 137.114 114.748 138.41 114.748C139.634 114.748 140.534 115.936 140.534 117.556V117.628C140.534 119.212 139.67 120.4 138.446 120.4Z" fill="#292929"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="skill-info">
+                        <h5>
+                            Figma
+                        </h5>
+                        <p>
+                            Figma is a cloud-based design tool that allows teams to collaborate on the design process in real time. It offers a range of features for designing, prototyping, and sharing user interfaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         
-        <script src="./script.js"></script>
 </body>
 </html>
