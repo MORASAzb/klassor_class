@@ -45,7 +45,7 @@
 
 
                 }
-                    nav>.logowrapper{
+                    .logowrapper{
                         display: flex;
                         align-items: center;
                         gap: 5px;
@@ -617,14 +617,136 @@
 
                                 }
                     @media screen and (max-width : 1000px) {
-                        .comments{
-                                    
-                                }
                         .comment>p{
                             font-size: 5vw;
                         }
 
-                                }              
+                                }
+            
+                .aboutme-info{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        @media screen and (max-width : 600px) {
+                            grid-template-columns: 1fr ;
+                        }
+                    }
+                    .aboutme-info h4{
+                        color: var(--main-colors-gray-4, #292929);
+                        font-family: Anton;
+                        font-size: 64px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%;
+                        text-transform: uppercase;
+                        margin: 0 ;
+                        padding-bottom: 3vw;
+                        @media screen and (max-width : 1700px) {
+                            font-size: 5vw;
+                            @media screen and (max-width : 600px) {
+                            font-size: 10vw;
+                            margin-bottom: 40px;
+                           
+                        }
+                           
+                        }
+                        @media screen and (min-width : 1700px) {
+                            padding-bottom: 0px;
+                        }
+                        }
+                    .aboutme-info p{
+                        color: var(--main-colors-gray-3, #464646);
+                        font-family: GothamBlack;
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 100%; /* 36px */
+                        letter-spacing: -1.8px;
+                        margin: auto;
+                        padding-right: 130px;
+                        @media screen and (max-width : 1700px) {
+                            font-size: 2vw;
+                            letter-spacing: -0.1vw;
+                            padding-right: 7.5vw;
+                            @media screen and (max-width : 600px) {
+                            font-size: 5vw;
+                            letter-spacing: -0.2vw;
+                            margin-bottom: 20px;
+                           
+                            }
+                        }
+                    }
+                    .aboutme-info:first-child p{
+                            
+                            @media screen and (max-width : 1700px) {
+                            padding-bottom: 30px;
+                            margin-bottom: 20px;
+
+                        }
+                    }
+                    p.special-info{
+                       direction: rtl; 
+                       padding: 0 0 0 130px;
+                       @media screen and (max-width : 1700px) {
+                            padding: 0 0 0 7.5vw;
+                        }
+                    }
+                        .aboutme-info .image{
+                            width: 100%;
+                            height: 31vw;
+                            background-repeat: none;
+                            background-size: cover;
+                            @media screen and (min-width : 1700px) {
+                                height: 527px;
+                            }
+                            @media screen and (max-width : 600px) {
+                            width: 80vw;
+                            height: 100vw;
+                            margin-bottom: 50px;
+                            }
+                        }
+                        .aboutme-info:first-child .image{
+                            width: 100%;
+                            height: 100%;
+                            background-repeat: none;
+                            background-size: cover;
+                            
+                            @media screen and (min-width : 1700px) {
+                                height: 527px;
+                            }
+                            @media screen and (max-width : 600px) {
+                            width: 80vw;
+                            height: 100vw;
+                            }
+                            
+                        }
+                        .babyimg{
+                            background: url(./baby.jfif), lightgray 50% / cover ;  
+                        }
+                        .teenimg{
+                            background: url(./teen.jfif), lightgray 50% / cover ;
+                        }
+                        .youngimg{
+                            background: url(./young.jfif), lightgray 50% / cover ;
+                        } 
+                        .rtl-info p{
+                            @media screen and (max-width : 600px) {
+                                order: -1;
+                                padding: 0 30px 0 0;
+                                direction: ltr;
+                            }
+                        }
+                        @media screen and (max-width:600px) {
+                            .image{
+                                margin-bottom: 40px;
+                                background-position: -15vw;
+                            }
+                            .aboutme-info p{
+                                padding-bottom: 30px;
+                            }
+
+                            
+                        }
+                            
 
                                                     
                     
@@ -641,7 +763,181 @@
         .stats-container{
                     margin-top: calc(1vw + 50px) ;
                 }
+                    
+        .aboutme{
+                margin-top: calc(5% + 50px);
+            }
+        .orange{
+            background: var(--Red_Orange, linear-gradient(90deg, #FA709A 0%, #FEE140 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: inherit;
+            font-weight: inherit;
+            font-family: inherit;
+        }
+        .green{
+            background: var(--Green_Blue, linear-gradient(90deg, #84FAB0 0%, #8FD3F4 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: inherit;
+            font-weight: inherit;
+            font-family: inherit;
+        }
+        .purple{
+            background: var(--Blue_Purple, linear-gradient(90deg, #E0C3FC 0%, #8EC5FC 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: inherit;
+            font-weight: inherit;
+            font-family: inherit;
+        }
+        .colombia{
+            font-size: inherit;
+            font-weight: inherit;
+            font-family: inherit;
+            background: linear-gradient(90deg, #FFE76A 6.02%, #65C8FF 7%, #65C8FF 14.18%, #65C8FF 20.09%, #F00 20.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        footer{
+            background: var(--main-colors-gray-4, #292929);
+            padding: calc(10vw + 50px) 0 50px ;
+            position: relative;
+            margin-top: 300px;
+            @media screen and (max-width:830px) {
+                        margin-top: 20vw;
+                        @media screen and (max-width:700px) {
+                        padding: calc(10vw ) 0 50px ;
+                       
+                    }
+                    }
+            
+        }
+            .container-footer{
+                padding-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                @media screen and (max-width : 750px) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 40px;
+                    
+                }
+
+            }
+                .container-footer>ul{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                list-style: none;
+                color: var(--White, #FFF);
+                font-family: Gotham;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 20px */
+                letter-spacing: -1px;
+                gap: 30px;
+                }
+                .container-footer>ul>li>a{
+                text-decoration: none;
+                color: var(--White, #FFF);
+                font-family: Gotham;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 20px */
+                letter-spacing: -1px;
+                @media screen and (max-width:500px) {
+                    font-size: 3.8vw;
+                        }
+                }
+                footer .logowrapper{
+                    color: var(--White, #FFF);
+                    font-family: Poppins;
+                    font-size: 45px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%; /* 45px */
+                    }
+                .band{
+                    padding: 1px;
+                    background-color: #E6E6E6;
+                    height: 1px;
+                    margin-top: 30px;
+                }
+                .message{
+                    padding: 5vw 0 68px 5vw;
+                    position: absolute;
+                    top: 0;
+                    border-radius: 15px;
+                    background: var(--main-colors-purple-4, #A87FF3);
+                    top: 0;
+                    left: 50%;
+                    width: calc(100vw - 200px);
+                    transform: translate(-50%, -50%);
+                    @media screen and (max-width:830px){
+                        width: 80vw;
+                        @media screen and (max-width:700px) {
+                            padding-bottom: 20px;
+                        }
+                    }
+
+                }
+                .message>p{
+                    margin: 0;
+                    margin-left: 100px;
+                    color: #FFF;
+                    font-family: Gotham;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%; /* 22px */
+                    @media screen and (max-width:1605px) {
+                        padding-right: 200px;
+                        margin-left: 0;
+                        @media screen and (max-width:700px) {
+                            color: #FFF;
+                            font-family: Gotham;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 100%; /* 12px */
+                            letter-spacing: -0.6px;
+                            text-transform: capitalize;
+                            padding-right: calc(13vw + 50px);
+                        }
                         
+                    }
+                    
+                }
+                .left-message{
+                    position: absolute;
+                    top: calc(+2.1vw - 64px);
+                    left: 100px;
+                    @media screen and (max-width:830px) {
+                        left: 10vw;
+
+                    }
+                    @media screen and (max-width:1605px) {
+                        display: none;
+                        
+                    }
+                }
+                .right-message{
+                    position: absolute;
+                    top: -110px;
+                    right: 100px;
+                    @media screen and (max-width:830px) {
+                        right: 10vw;
+                    }
+                    
+                }
 
     </style>
 </head>
@@ -1123,6 +1419,86 @@
                         </svg>
                 </div>
         </div>
+        <div class="aboutme padding-x">
+            <div class="aboutme-info">
+                <div>
+                    <h4>
+                        ABOUT ME
+                    </h4>
+                    <p>
+                        I am a <small class="orange">Product Designer</small> and Frontend Developer, I fully understand the process of design and development of a digital product, my job is to make a product usable and visually appealing, through the <small class="orange">Design Thinking</small> methodology I manage to create products that are endearing to users.
+
+                    </p>
+                </div>
+                <div class="babyimg image">
+
+                </div>
+            </div>
+
+            <div class="aboutme-info rtl-info">
+                <div class="teenimg image">
+
+                </div>
+                <p class="special-info">
+                    I am passionate about <small class="green">never stop learning</small>, I am constantly training and learning about new and changing <small class="green">technology</small> trends that way I bring an updated opinion of the Tech industry.
+                </p>
+
+            </div>
+            <div class="aboutme-info">
+                <p>
+                    My full name is <small class="purple"> Cristian David Muñoz Camayo</small> and more than what I said before I am a dreamer, I am proudly <small class="colombia">Colombian</small> and in me you will find a human being with the desire to do his best to help others.
+                </p>
+                <div class="youngimg image">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container-footer padding-x">
+            <div class="logowrapper">
+            <img src=".\Group 1.png" width="60px" alt="">
+            tian
+        </div>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Portfolio</a>
+            </li>
+            <li>
+                <a href="">Skills</a>
+            </li>
+            <li>
+                <a href="">Abount Me</a>
+            </li>
+        </ul>
+         </div>
+        <div class="band"></div>
+         <div class="message ">
+            <p>
+                Thanks for visit my website
+            </p>
+            <p>
+                If you have any questions you can write me to any of my social networks, I am sure I will answer you.
+            </p>
+         </div>
+         <img class="left-message" src="./Frame 36.png" alt="">
+         
+        <svg class="right-message" width="150" height="125" viewBox="0 0 150 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Frame 35" clip-path="url(#clip0_2_6710)">
+            <path id="Vector 11" d="M2.10877 0C-2.47972 13.6472 -2.58169 43.5005 33.7184 53.7359C59.5135 61.0093 71.9043 73.0204 77.0377 82.4238C80.2882 88.3782 81.1898 95.5294 85.2231 100.984C95.8663 115.378 118.222 127.95 152 101.842" stroke="white" stroke-width="2"/>
+            <path id="Vector 12" d="M19.1088 -13C14.5203 -0.635856 14.4183 26.4107 50.7184 35.6838C75.0048 41.8879 87.4091 51.897 93.0613 60.1568C97.2397 66.2629 98.3974 74.2127 103.299 79.7555C114.332 92.234 136.32 102.152 169 79.2674" stroke="white" stroke-width="2"/>
+            <path id="Vector 13" d="M33.1088 -32C28.5203 -20.1024 28.4183 5.92351 64.7184 14.8467C88.3918 20.666 100.775 29.9642 106.62 37.7912C111.197 43.9198 112.493 52.2044 117.761 57.7503C128.94 69.52 150.771 78.5029 183 56.7856" stroke="white" stroke-width="2"/>
+            <path id="Vector 14" d="M58.1088 -43C53.5203 -31.1024 53.4183 -5.07649 89.7184 3.84669C113.392 9.666 125.775 18.9642 131.62 26.7912C136.197 32.9198 137.493 41.2044 142.761 46.7503C153.94 58.52 175.771 67.5029 208 45.7856" stroke="white" stroke-width="2"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2_6710">
+            <rect width="150" height="125" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+        </footer>
 
 
         
