@@ -91,9 +91,7 @@ function sumArrayElements(arr) {
   }
 function practiceFour(str) {
     const inputArray=str.split(",").map(value=>Number(value.trim()))
-    
-    let answer = sumArrayElements(inputArray) 
-    answer<0  ? answer = 0 : 0;
+    let answer = 0 
     inputArray.unshift(-1);
     inputArray.push(-1);
     const indexOfNegativeNumbers=[]
@@ -112,12 +110,8 @@ function practiceFour(str) {
             if (sumCheck> answer){
                 answer = sumCheck
             }
-            
         }
-        
     }
-    
-
     return answer
 }
 
