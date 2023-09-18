@@ -1,0 +1,99 @@
+h1{
+    color:  #EEE;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 146.5%;
+    letter-spacing: -0.72px; 
+    margin-top: calc(30px + 4vw);
+    margin-bottom:0;
+    @media (max-width:570px) {
+        font-size: 6.3vw;
+    }
+}
+p{
+color: var(--font-color-description-light, #ACAFB8);
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 170%;
+letter-spacing: -1px;
+padding: 4px;
+margin-top: 8px;
+margin-bottom: 0;
+@media (max-width:570px) {
+    font-size: 4vw;
+}
+}
+label{
+    color: #bdc0c9;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 172%;
+    letter-spacing: -0.7px;
+    display: block;
+    padding-right: 60px;
+    margin-top: 13px;
+    @media (max-width:570px) {
+        font-size: 3.5vw;
+    }
+}
+.input-labeled{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto;
+    @media (max-width:570px) {
+        margin: 30px auto;
+    }
+
+    
+}
+    .input-labeled>input{
+        border-radius: 8px;
+        background: var(--font-color-title-light, #EEE);
+        display: flex;
+        max-width: 600px;
+        padding: 16px 0 15px 50px;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        box-sizing: border-box;
+        border: none;
+        color: #4C526A;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+    }
+    .input-labeled>svg{
+        margin: 13px 0 0 20px;
+        position: absolute;
+    }
+.recomendation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+
+}
+    .recomendation>p ,.recomendation>p>small>a{
+        margin: 0 5px;
+        color: #bdc0c9;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 172%; /* 24.08px */
+        @media (max-width:570px) {
+            font-size: 3.8vw;
+        }
+
+    }
+

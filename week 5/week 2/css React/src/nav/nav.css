@@ -1,0 +1,79 @@
+.nav-nav *{
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.14px;
+    text-align: center;
+}
+
+
+.nav-nav{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 40px;
+    padding: 20px 0; 
+    --brand-color-deep-blue : #0432DF;
+    --brand-color-text-muted : rgb(255,255,255,0.6);
+    --brand-color-text-active :white;
+}
+    .nav-logo{
+        width: 123px;
+        height: 37.23;
+        padding: 10px 10px 10px 0;
+    }
+    .nav-nav>ul{
+        display: flex;
+        flex-grow: 1;
+        justify-content: end;
+        gap: 36px;
+        padding: 10px;
+        margin: 0;
+    }
+        .nav-nav>ul>li{
+            list-style: none;
+        }
+            .nav-nav>ul>li>a{
+                color: var(--brand-color-text-muted);
+                text-decoration: none;
+                font-weight: 500;
+            }
+            .nav-nav>ul>li>a.active{
+                color: var(--brand-color-text-active);
+            }
+    .nav-nav>button{
+        color: var(--brand-color-text-active);
+        padding: 10px 20px;
+        gap: 10px;
+        font-weight: 600;
+        border-radius: 8px;
+        border: 1px solid var(--brand-color-deep-blue);
+        background: var(--brand-color-deep-blue);
+        width: 78px;
+    }
+    .nav-nav>svg{
+        display: none;
+    }
+ 
+    
+@media (max-width : 850px)
+{
+    .nav-nav>button{
+        display: none;
+
+    }
+    .nav-nav>ul{
+        display: none;
+    }
+    .nav-nav>svg{
+        display: block;
+    }
+    .nav-nav{
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
