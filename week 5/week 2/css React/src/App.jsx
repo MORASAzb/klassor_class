@@ -1,6 +1,7 @@
 import './App.css'
 import Nav from "./nav/nav.jsx"
 import Header from "./header/header.jsx"
+import Company from "./company/company.jsx"
 function App() {
   
 
@@ -13,6 +14,9 @@ function App() {
       <div className='padding-x '>
         <Header/>
       </div>
+    </div>
+    <div className=''>
+          <Company/>
     </div>
     </>
   )
