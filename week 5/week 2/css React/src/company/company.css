@@ -2,8 +2,9 @@
     background: #FAFAFA;
     padding: 0 5vw ;
     padding-bottom: calc(2vw + 25px);;
+    padding-top: calc(2vw + 25px);
 }
-h2{
+.company>h2{
     color: var(--font-color-title-dark, #020D37);
     text-align: center;
     font-family: Poppins;
@@ -12,10 +13,11 @@ h2{
     font-weight: 600;
     line-height: 30px; /* 150% */
     letter-spacing: -0.4px;
-    margin-top: calc(2vw + 25px);
+    
     margin-bottom: calc(1vw + 35px);
+    
 }
-ul{
+ul.logoes{
     padding: 0;
     list-style: none;
     display: flex;
@@ -29,7 +31,7 @@ ul{
         gap: calc(5vw + 15px)
     }
 }
-    ul>li{
+    ul.logoes>li{
         grid-column: 2 span;
         display: flex;
         justify-content: center;
@@ -37,15 +39,16 @@ ul{
         
         
     }
-    ul>li.span{
+    ul.logoes>li.span{
         grid-column: 3 span;
         @media (max-width : 850px) {
             margin-left:5px;
         }
         
     }
-    img{
-        flex-grow: 1;
-        flex-shrink: 0;
-        max-width: 30vw;
-    }
+
+        ul.logoes>li>img{
+            flex-grow: 1;
+            flex-shrink: 0;
+            max-width: 30vw;
+        }

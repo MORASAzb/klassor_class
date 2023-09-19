@@ -16,7 +16,7 @@ import Pewdiepie from './public/Pewdiepie-logo 1.png'
           <h2>
             Trusted by top Youtuber and Production House
           </h2>
-          <ul>
+          <ul className='logoes'>
               <li >
                 <img src={channels4} alt="" />
               </li>

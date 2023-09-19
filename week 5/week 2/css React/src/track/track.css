@@ -1,0 +1,165 @@
+.track-title{
+    color: var(--font-color-title-dark, #020D37);
+    font-family: Poppins;
+    font-size:  calc(17px + 1vw) ;
+    font-style: normal;
+    font-weight: 600;
+    line-height: calc(2vw + 25px); 
+    letter-spacing: -0.56px;
+    margin: calc(20px + 5vw) 0 0;
+}
+
+ul.category{
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    padding-left: 0;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 138%; /* 22.08px */
+    letter-spacing: -0.8px;
+    margin-top: 24px;
+@media (max-width : 550px) {
+    max-width: 280px;
+    gap: 5vw;
+    overflow: hidden;
+    
+}
+    
+}
+    
+ul.tracks{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0px;
+    gap: 10px;
+    margin-bottom: 25px;
+
+}
+    ul.tracks ul{
+        list-style: none;
+        display: flex;
+        gap: 4px;
+        color: var(--font-color-description-dark, #4C526A);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 138%;
+        letter-spacing: -0.8px;
+        align-items: center;
+        padding: 0;
+        
+     }
+ul.tracks>li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 47px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    padding: 5px 10px 10px;
+    @media (max-width: 400px) {
+        gap: 5vw;
+    }
+
+}
+    .track-content>h5 ,.track-content>label{
+        
+        margin: 0;
+        padding: 0;
+    }
+    .track-content>h5 {
+        
+        color: var(--font-color-title-dark, #020D37);
+        font-feature-settings: 'salt' on, 'liga' off;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 138%; 
+        letter-spacing: -0.8px;
+    }
+    .track-content>label{
+        color: var(--font-color-description-dark, #4C526A);
+        font-feature-settings: 'salt' on, 'liga' off;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 172%; 
+        letter-spacing: -0.6px;
+    }
+    ul.tracks ul.actions{
+        gap: 2vw;
+    }
+    div.geners , div.tags{
+        color: var(--font-color-description-dark, #4C526A);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 138%; 
+        letter-spacing: -0.8px;
+
+    }
+    .track-content {
+        min-width: 15%;
+        
+    }
+    div.geners,.tags{
+        min-width: 20%;
+        
+    }
+
+    .tags{
+        flex-grow: 2;
+    }
+    .actions , .track>svg ,.track-content ,div.geners{
+        flex-shrink: 0;
+    }
+
+    @media (max-width : 825px) {
+        div.tags{
+            display: none;
+        }
+        .geners{
+            flex-grow: 2;
+        }
+
+        
+    }
+    @media (max-width : 650px) {
+        div.geners{
+            display: none;
+        }
+        .track-content{
+            flex-grow: 2;
+        }
+        .track.extra-track{
+            display: none;
+        }
+
+        
+    }
+    @media (max-width:350px){
+        .like{
+            display: none;
+        }
+    }
+    a.see-more{
+        color: var(--brand-color-deep-blue, #0432DF);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; 
+        letter-spacing: -0.14px;
+        text-decoration-line: underline;
+    }
+
+
+
+

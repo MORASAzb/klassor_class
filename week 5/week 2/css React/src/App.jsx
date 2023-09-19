@@ -2,6 +2,7 @@ import './App.css'
 import Nav from "./nav/nav.jsx"
 import Header from "./header/header.jsx"
 import Company from "./company/company.jsx"
+import Track from "./track/track.jsx"
 function App() {
   
 
@@ -15,9 +16,11 @@ function App() {
         <Header/>
       </div>
     </div>
-    <div className=''>
-          <Company/>
+    <Company/>
+    <div className='padding-x '>
+        <Track/>
     </div>
+    
     </>
   )
 }
