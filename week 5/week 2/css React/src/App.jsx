@@ -4,6 +4,7 @@ import Header from "./header/header.jsx"
 import Company from "./company/company.jsx"
 import Track from "./track/track.jsx"
 import Category from "./category/category.jsx"
+import WhyUs from "./whyuys/whyus.jsx"
 function App() {
   
 
@@ -23,6 +24,9 @@ function App() {
     </div>
     <div className='padding-x '>
         <Category/>
+    </div>
+    <div className='padding-x '>
+        <WhyUs/>
     </div>
     
     </>

@@ -1,0 +1,136 @@
+.whyus-container{
+    display: flex;
+    margin-top: calc(60px + 2vw) ;
+    padding-bottom: 7vw;
+}
+    .whyus-container>.whyus-header{
+        margin-right:7vw;
+        
+        flex-shrink: 0;
+
+    }
+
+        .whyus-container>div>label{
+            color: var(--brand-color-brave-yellow, #F59E00);
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 14px; 
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .whyus-container>div>h4{
+            color: var(--font-color-title-dark, #020D37);
+            font-feature-settings: 'salt' on, 'liga' off;
+            font-family: Poppins;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 45px;
+            letter-spacing: -0.56px;
+            max-width: 360px;
+            margin: 15px 0 0 0;
+            
+        }
+
+    .whyus-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4vw;
+    }
+    .whyus-card{
+        max-width: 300px;
+    }
+        .whyus-card *{
+            text-align: start;
+        }
+            .whyus-card>svg{
+                width: 60px;
+            }
+            .whyus-card>h5{
+                color: var(--font-color-title-dark, #020D37);
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 172%;
+                letter-spacing: -0.9px;
+                margin: 20px 0 0 0;
+            }
+            .whyus-card>p{
+                color: var(--font-color-description-dark, #4C526A);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 172%;
+                margin-top: 0;
+                padding-right: 50px;
+            }
+@media (max-width:1110px) {
+                .whyus-container{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: calc(60px + 2vw) ;
+                }
+                    .whyus-container>.whyus-header{
+                        margin-right:0;
+                        text-align: center;
+                        margin-bottom: 41px;
+                    } 
+                        .whyus-container>div>h4{
+                            max-width:600px;
+                            margin: auto;
+                            margin-top: 15px; 
+                        }
+                        .whyus-card {
+                            text-align: start;
+                            max-width: unset;
+                        }
+                        .whyus-cards{
+
+                            gap: 4vw;
+                        }
+                            .whyus-card>h5{
+                                font-size: 2.5vw;
+                                letter-spacing: -0.1vw;
+                                margin-top: 0.5vw;
+                            }
+                            .whyus-card>p{
+                                font-size: 2vw;
+                                padding-right: 5vw;
+                            }     
+                
+            }
+@media (max-width:600px) {
+
+                        .whyus-cards{
+                            grid-template-columns: 1fr;
+                            gap: 7vw;
+                        }
+                        .whyus-card>svg{
+                            width: 20vw;
+                        }
+                        .whyus-card>h5{
+                            font-size: 5.5vw;
+                            letter-spacing: -0.1vw;
+                            
+                            
+                        }
+                        @media (max-width:380px) {
+                            .whyus-container>div>h4{
+                                font-size: 7vw;
+                                letter-spacing: -0.1vw;
+                                line-height: 9.5vw;
+                                
+                            }
+                }
+                        .whyus-card>p{
+                            font-size: 4.5vw;
+                            padding-right: 10vw;
+                            margin-top: 0;
+                        }
+   
+                
+            }
