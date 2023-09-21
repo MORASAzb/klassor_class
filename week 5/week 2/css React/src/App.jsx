@@ -5,6 +5,7 @@ import Company from "./company/company.jsx"
 import Track from "./track/track.jsx"
 import Category from "./category/category.jsx"
 import WhyUs from "./whyuys/whyus.jsx"
+import LinkMore from "./componenets/linkMore"
 function App() {
   
 
@@ -21,6 +22,7 @@ function App() {
     <Company/>
     <div className='padding-x '>
         <Track/>
+        
     </div>
     <div className='padding-x '>
         <Category/>

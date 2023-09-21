@@ -1,6 +1,6 @@
 .header{
-  background-image: url(.\public\594b192718adcca8c5aa8c560f08638d.jfif);
-  background: linear-gradient(0deg, rgba(2, 13, 55, 0.70) 0%, rgba(2, 13, 55, 0.70) 100%), url(.\public\594b192718adcca8c5aa8c560f08638d.jfif), lightgray 0px 0px / 100% 100% no-repeat;
+  background-image: url(./public/594b192718adcca8c5aa8c560f08638d.jfif);
+  background: linear-gradient(0deg, rgba(2, 13, 55, 0.70) 0%, rgba(2, 13, 55, 0.70) 100%), url(./public/594b192718adcca8c5aa8c560f08638d.jfif), lightgray 0px 0px / 100% 100% no-repeat;
   background-position: center -100px ;
   padding-bottom: calc(45px + 5vw);
 
