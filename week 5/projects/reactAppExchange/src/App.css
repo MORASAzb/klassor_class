@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+  margin: 0;
+  padding: 0;
 }
-.container{
-  max-width: 500px;
-  margin: auto;
-  background-color: rgb(215, 182, 247);
-  border-radius: 10px;
-  padding: 10px 5px 20px;
+*{
+  color: aliceblue;
 }
-  .band{
-    padding: 1px;
-    background-color: red;
-  }
-  .rate{
-    margin-top: 20px;
-  }
-  .date{
-    margin: 20px 0;
-  }
-  .inputrow{
+.headerbackground{
+  padding: 0 5vw;
+  background-image: url(./public/594b192718adcca8c5aa8c560f08638d.jfif);
+  background-position: center -100px ;
+  padding-bottom: calc(45px + 5vw);
+}
+nav.navbar{
     display: flex;
-    gap: 5px;
+    align-items: center;
     justify-content: center;
-    margin: 5px 0;
+    gap: 40px
+    ;
+    padding: 20px 0;
+}
+nav>ul{
+  color: aliceblue;
+  flex-grow: 1;
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  gap: 36px;
+}
+.logo{
+  padding: 10px 10px 10px 0px;
+
+}
+  .logo>svg{
+    height: 17.2px;
+    width: 112.619px;
   }
-    .inputrow>input , select{
-      width: 45%;
-      height: 40px;
-      border-radius: 5px;
-      border: none;
-      background-color: aliceblue;
-      color: black;
-      padding: 0 10px;
-    }
+  .navbar>button{
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 8px;
+  }
+  nav>svg{
+    display: none;
+  }
+@media (max-width:550px) {
+  nav>ul{display: none;
+  }
+  nav>button{
+    display: none;
+  }
+  nav>svg{
+    display: block;
+  }
+  nav.navbar{
+    justify-content: space-between;
+  }
+
+}
 
 
 
+
+.header{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 51px;
+  padding:  calc(8vw + 20px) 0;
+}
+.header h1{
+  color: white;
+  font-size: 36px;
+  font-weight: 500x;
+  margin: 0;
+  @media (max-width : 525px) {
+      font-size: 6.8vw;
+  }
+}
+  .link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header>.labeled-input{
+    max-width: 600px;
+    position: relative;
+  }
+  .header input{
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    padding-left: 52px;
+    margin-bottom: 10px;
+    
+    
+    
+  }
+  .header p {
+    margin: 0;
+  }
+
+  .header svg{
+    position: absolute;
+    top: 18px;
+    left: 20px;
+  }
+  label{
+    display: block;
+  }
 
