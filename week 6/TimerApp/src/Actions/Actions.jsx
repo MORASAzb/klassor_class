@@ -33,7 +33,7 @@ function Actions(prop) {
     }
 
     function actionHandler(event) {
-        const action =event.target.value
+        const action = event.target.value
         if (action =="Set" ) {
             if(hasNonZeroElement(prop.time) )
             
