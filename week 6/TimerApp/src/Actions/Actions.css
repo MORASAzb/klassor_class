@@ -1,0 +1,65 @@
+
+.buttons{
+    display: flex;
+    gap: 1.5vw;
+
+}
+.actions{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1.5vw;
+
+}
+.btn-nums{
+    width:80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 1.5vw;
+}
+.btn-num{
+    color: black;
+    font-size:6vw;
+    border: 1vw solid #303030;
+    background-color: rgb(10, 226, 10);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    }
+.actions>button{
+    border: solid 1vw black;
+    border-radius: 3vw;
+    width: 100%;
+    height: 100%;
+}
+.d-none{
+    display: none;
+}
+.mainAction{
+    background-color: rgb(10, 226, 10);
+}
+.started{
+    max-width: 50vw;
+    margin: auto;
+    height: 20vw;
+    position: relative;
+
+}
+.started>button{
+    font-size: 4vw;
+}
+
+.back{
+    position: absolute;
+    bottom: 0;
+    left: -20vw;
+    border: none;
+}
+
+.back button{
+    background-color: red;
+    font-size: 2vw;
+    padding: 2vw;
+    border: none;
+    border-radius: 10vw;
+}

@@ -1,0 +1,20 @@
+.timer-container{
+    position: relative;
+    
+}
+.time{
+    background-color: #e6e9ff;
+    border: 1vw solid #303030;
+    border-radius: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17vw;
+    color: #000000;
+  }
+label{
+    position: absolute;
+    bottom: 1vw;
+    right: 4vw;
+    font-size: 5vw;
+}
