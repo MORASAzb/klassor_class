@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Fullname from "./fullname/Fullname.jsx"
 import './App.css'
 import Fruits from "./Fruits.jsx"
 
@@ -16,9 +15,11 @@ function changeFruit(event) {
   
 }
 function pushFruit() {
-  setfruits([
-    ...fruits,
-    fruit]
+  setfruits(
+    [
+      ...fruits,
+      fruit
+    ]
   )
   setfruit("")
 }
