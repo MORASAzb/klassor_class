@@ -1,19 +1,11 @@
-import { useState } from 'react'
 import './Profile.css'
-import profileimg from "./User profile img 1.png"
-function Profile() {
-    const profileInfo = {
-        nickname:"Chandan S",
-        username:"uiuxchandan"
-    }
+function Profile(prop) {
+    const profileInfo = prop.profileInfo
 
   return (
     <>
         <div className='profile-container'>
-            <div>
-                <img src={profileimg} alt="" />
-                
-            </div>
+            <img src={profileInfo.profileimg} alt="" />
             <div className="profile-info">
                 <h5 className="nickname">
                     {profileInfo.nickname}

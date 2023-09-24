@@ -4,6 +4,8 @@ nav{
     background: var(--color-light-card-bg-c-1-light, #FCFCFC);
     padding: 12px 20px;
     align-items: center;
+    gap: 30px;
+    width: 100%;
 }
     nav>ul{
         display: flex;
@@ -11,5 +13,34 @@ nav{
         list-style: none;
         gap: 15px;
         align-items: center;
+        padding: 0;
+        flex-shrink: 0;
         
+    }
+    nav>ul>li{
+        text-decoration: none;
+        color: var(--color-light-p-text-c-1-light, #5B5D67);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 15px;
+    }
+    .selected-view{
+        border-radius: 8px;
+        background: var(--global-global-primary-c-1, #4361EE);
+        color: var(--global-neutral-white, #FFF);
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+    }
+    .search{
+        height: 50px;
+        width: 222px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
