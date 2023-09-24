@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    border-radius: 12px;
+    background: var(--color-light-card-bg-c-1-light, #FCFCFC);
+    padding: 12px 20px;
+    align-items: center;
+}
+    nav>ul{
+        display: flex;
+        flex-grow: 1;
+        list-style: none;
+        gap: 15px;
+        align-items: center;
+        
+    }
