@@ -3,7 +3,14 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+
 }
+.profile-container *:not(:last-child) {
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
 .profile-container>img{
     height: 32px;
 
@@ -31,3 +38,5 @@
             font-weight: 400;
             line-height: normal;
         }
+
+

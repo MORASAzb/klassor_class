@@ -1,0 +1,71 @@
+.leftbar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding:30px 40px;
+
+}
+.social-header{
+    color: var(--color-light-logo-text-color, #000);
+    font-family: Pulp Display;
+    font-size: 25.364px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.social-header>svg{
+
+    margin-right: 10px;
+    
+}
+.leftbar-container ul{
+    margin-top: 50px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: auto;
+
+    flex-grow: 1;
+}
+.leftbar-container ul>li{
+    display: flex;
+    color: var(--color-light-p-text-c-1-light, #5B5D67);
+font-family: Pulp Display;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ 
+    gap: 20px;
+
+}
+.download{
+background-color: #0033ff17;
+padding: 30px 20px;
+border-radius: 20px;
+}
+.download>p{
+    color: var(--color-light-heading-c-1-light, #171923);
+    font-family: Pulp Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.download>a{
+
+color: var(--global-global-primary-c-1, #4361EE);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration: none;
+border-bottom: #4361EE solid 1px;
+padding-bottom: 8px;
+}
+

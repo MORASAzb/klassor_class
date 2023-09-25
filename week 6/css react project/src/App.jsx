@@ -6,6 +6,9 @@ import profilePic from "./Story/public/1.png"
 import CreatePost from './Post/CreatePost'
 import profileimg from "./public/profilepic.png"
 import PostList from "./Post/PostList"
+import SuggestBlock from "./SuggestBlock/SuggestBlock.jsx"
+import profileIcon1 from "./Story/public/3.png"
+import Leftbar from "./Leftbar/Leftbar.jsx"
 function App() {
   const menuList = [
     {text:"Explore",link:"#"},
@@ -47,7 +50,42 @@ function App() {
     nickname:"Chandan S",
     username:"@uiuxchandan",
     profileimg:profileimg,
-}
+  }
+  const suggestedPages ={
+    title:"Contacts",
+    list:[
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+
+    ]
+    ,
+
+  }
+  const suggestedContacts ={
+    title:"Suggested Contacts",
+    list:[
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+        {name:"Bessie Cooper",imgURL:profileIcon1},
+    ]
+    ,
+
+  }
 
   const [selectedView,setSelectedView] = useState(0)
   function showStory(params) {
@@ -55,12 +93,17 @@ function App() {
   }
   function addStory(params) {
     
+
+  }
+  function viewHandler(params) {
+    console.loh("OK")
   }
 
   return (
     <>
     <div className="main">
       <div className="left-bar">
+      <Leftbar/>
 
       </div>
       <div className="main-content">
@@ -72,18 +115,14 @@ function App() {
             <div className="stories">
                 <StoryList showStory={showStory} stories={stories} addStory={addStory}/>
             </div>
-
             <div className="posts">
-              <div className="create-post">
-                  <CreatePost profileimg={profileInfo.profileimg}/>
-              </div>
+              <CreatePost  profileimg={profileInfo.profileimg}/>
               <PostList profileimg={profileInfo.profileimg} />
-
-
-
             </div>
           </div>
           <div className="right-side">
+            <SuggestBlock key={suggestedContacts.title} suggested={suggestedContacts} onClick={viewHandler}/>
+            <SuggestBlock  key={suggestedPages.title} suggested={suggestedPages} onClick={viewHandler}/>
 
           </div>
         </div>

@@ -26,6 +26,7 @@ nav{
         font-weight: 400;
         line-height: normal;
         padding: 8px 15px;
+
     }
     .selected-view{
         border-radius: 8px;
@@ -43,4 +44,24 @@ nav{
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width: 800px) {
+            display: none;
+            
+        }
     }
+    @media (max-width:500px) {
+        nav{
+            gap: 0.5vw;
+        }
+        nav>ul>li{
+        font-size: 2.8vw;
+        padding: 1.8vw 2.8vw;
+        }
+        nav>ul{
+
+            gap: 1vw;
+
+            
+        }
+
+    }    
