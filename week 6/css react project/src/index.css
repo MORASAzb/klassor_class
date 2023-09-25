@@ -13,3 +13,9 @@ body {
   margin: 0;
   padding: 0;
 }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  scroll-behavior: smooth;
+}
+

@@ -1,15 +1,14 @@
-import './CreatePost.css'
-
+import './Post.css'
+import PostInput from "./PostInput"
 
 function CreatePost(prop) {
   const  profileimg=prop.profileimg
 
   return (
     <>
-        <div className="createpost-container">
-            <div className='createpost-content'>
-                <img src={profileimg}  />
-                <input type="text" placeholder='What’s on your mind?' />
+        <div className="post-container">
+            <div >
+                <PostInput profileimg={profileimg} placeholder="What’s on your mind?"/>
             </div>
             <div className="createpost-actions">
                 <div className="createpost-attaches">

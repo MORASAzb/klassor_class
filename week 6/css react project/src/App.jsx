@@ -5,7 +5,7 @@ import StoryList from './Story/StoryList'
 import profilePic from "./Story/public/1.png"
 import CreatePost from './Post/CreatePost'
 import profileimg from "./public/profilepic.png"
-
+import PostList from "./Post/PostList"
 function App() {
   const menuList = [
     {text:"Explore",link:"#"},
@@ -45,7 +45,7 @@ function App() {
   }]  
   const profileInfo = {
     nickname:"Chandan S",
-    username:"uiuxchandan",
+    username:"@uiuxchandan",
     profileimg:profileimg,
 }
 
@@ -77,7 +77,10 @@ function App() {
               <div className="create-post">
                   <CreatePost profileimg={profileInfo.profileimg}/>
               </div>
-  
+              <PostList profileimg={profileInfo.profileimg} />
+
+
+
             </div>
           </div>
           <div className="right-side">
