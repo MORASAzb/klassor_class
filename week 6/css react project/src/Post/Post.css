@@ -106,6 +106,10 @@
     display:flex;
     gap: 10px;
     }
+.creator-profile>img{
+    width: 40px;
+    height: 40px;
+}
 .posts-container{
     display: flex;
     flex-direction: column;

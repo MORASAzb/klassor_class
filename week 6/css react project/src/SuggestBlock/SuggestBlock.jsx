@@ -15,9 +15,9 @@ function SuggestBlock(prop) {
         </h5>
         <ul>
             {suggested.list.map(
-                (item)=>{
+                (item ,index)=>{
                     return(
-                    <li>
+                    <li  key={index} >
                         <img src={item.imgURL} alt="" />
                         {item.name}
                     </li>)

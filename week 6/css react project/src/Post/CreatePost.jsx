@@ -1,14 +1,48 @@
+import { useState } from 'react'
 import './Post.css'
 import PostInput from "./PostInput"
 
 function CreatePost(prop) {
   const  profileimg=prop.profileimg
+  const [input , setInput] = useState("")
+
+  function setNewInput(params) {
+    setInput(params)
+  }
+  function createPost() {
+    if(input.length > 0){
+        prop.createPost({
+            id : Math.random(500,1500),
+            category:0,
+            Creator :{
+                nickname:"You",
+                profileImg:profileimg
+            },
+            commentsCount: 0,
+            likes: "0",
+            createdAt:'00:00',
+            textContent : input,
+    
+    
+        })
+        setInput("")
+
+    }
+    else{
+        alert("First write something !")
+    }
+    
+
+
+  }
+
+  
 
   return (
     <>
         <div className="post-container">
             <div >
-                <PostInput profileimg={profileimg} placeholder="What’s on your mind?"/>
+                <PostInput onChange={setNewInput} profileimg={profileimg} input={input} placeholder="What’s on your mind?"/>
             </div>
             <div className="createpost-actions">
                 <div className="createpost-attaches">
@@ -38,7 +72,7 @@ function CreatePost(prop) {
 
 
                 </div>
-                <button >
+                <button onClick={createPost} >
                     Create a post
                 </button>
             </div>

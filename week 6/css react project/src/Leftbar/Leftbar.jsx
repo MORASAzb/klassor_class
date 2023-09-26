@@ -41,7 +41,7 @@ function Leftbar(prop) {
                     My Social
                     <ul>
                     {menuList.map((item, index) => (
-                        <li key={index}>
+                        <li className={index==0 ? "selected-page":"" } key={index}>
                             <img src={item.Img} alt={item.name} />
                             {item.name}
                         </li>

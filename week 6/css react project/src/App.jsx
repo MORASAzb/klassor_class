@@ -9,6 +9,10 @@ import PostList from "./Post/PostList"
 import SuggestBlock from "./SuggestBlock/SuggestBlock.jsx"
 import profileIcon1 from "./Story/public/3.png"
 import Leftbar from "./Leftbar/Leftbar.jsx"
+import smithImg from "./Post/public/1.png"
+
+import stiveImg from "./Post/public/3.png"
+
 function App() {
   const menuList = [
     {text:"Explore",link:"#"},
@@ -26,7 +30,7 @@ function App() {
       username:"Arlene McCoy",
       id:"2",
       content:profilePic,
-      seen:false,
+      seen:true,
   },{
       profileURL: profileIcon1,
       username:"Robert Fox",
@@ -88,24 +92,133 @@ function App() {
   }
 
   const [selectedView,setSelectedView] = useState(0)
-  const [stories,setStories] = useState(defaultStories)
+  const [stories,setStories] = useState(defaultStories.sort((a, b) => {
+    if (a.seen && !b.seen) {
+      return 1; 
+    } else if (!a.seen && b.seen) {
+      return -1; 
+    } else {
+      return 0; 
+    }
+  }))
 
 
 
   function showStory(id) {
     const idStory= id
     const newStories =  stories.map((story) => (story.id == String(idStory) ? { ...story, "seen": true } : story))
-    setStories( [...newStories])
+    setStories( [...newStories.sort((a, b) => {
+      if (a.seen && !b.seen) {
+        return 1; 
+      } else if (!a.seen && b.seen) {
+        return -1; 
+      } else {
+        return 0; 
+      }
+    })])
     const storyContent="Imagine this is Story u are watching !"
     alert(storyContent)
-
   }
+
+
+    
+  const defaultPosts = [{
+      id:1,
+      createdAt:'10:00',
+      textContent : "In the fast-paced world of corporate life, it's crucial to prioritize your mental peace. Take moments to breathe, reflect, and recharge. Seek solace in small rituals, like morning walks, deep breaths, or a quick meditation session during breaks. #mentalpeace #corporatelife",
+      likes: "1.1K",
+      commentsCount: 7,
+      Creator :{
+          nickname:"Nilofar Karami",
+          profileImg:smithImg
+      },
+      category:0,
+
+  },{
+      id:2,
+      createdAt:'12:00',
+      textContent : "In the fast-paced world of corporate life, it's crucial to prioritize your mental peace. Take moments to breathe, reflect, and recharge. Seek solace in small rituals, like morning walks, deep breaths, or a quick meditation session during breaks. #mentalpeace #corporatelife",
+      likes: "2.8K",
+      commentsCount: 7,
+      Creator :{
+          nickname:"Jamile Mojseni",
+          profileImg:smithImg
+      },
+      img:stiveImg
+      ,
+      category:0,
+
+
+  },
+  {
+      id:3,
+      createdAt:'08:00',
+      textContent : "In the fast-paced world of corporate life, it's crucial to prioritize your mental peace. Take moments to breathe, reflect, and recharge. Seek solace in small rituals, like morning walks, deep breaths, or a quick meditation session during breaks. #mentalpeace #corporatelife",
+      likes: "2.8K",
+      commentsCount: 7,
+      Creator :{
+          nickname:"Zahra Khayieri",
+          profileImg:smithImg
+      },
+      category:0,
+
+
+  },
+  {
+      id:4,
+      createdAt:'12:00',
+      textContent : "In the fast-paced world of corporate life, it's crucial to prioritize your mental peace. Take moments to breathe, reflect, and recharge. Seek solace in small rituals, like morning walks, deep breaths, or a quick meditation session during breaks. #mentalpeace #corporatelife",
+      likes: "2.8K",
+      commentsCount: 7,
+      Creator :{
+          nickname:"Poria Gol",
+          profileImg:profileIcon1
+      }
+      ,
+      img:stiveImg,
+      category:1,
+
+
+  },
+  {
+      id:5,
+      createdAt:'06:00',
+      textContent : "In the fast-paced world of corporate life, it's crucial to prioritize your mental peace. Take moments to breathe, reflect, and recharge. Seek solace in small rituals, like morning walks, deep breaths, or a quick meditation session during breaks. #mentalpeace #corporatelife",
+      likes: "3.2K",
+      commentsCount: 7,
+      Creator :{
+          nickname:"Hasan Maktob",
+          profileImg:smithImg
+      },
+      category:2,
+
+  },]
+
+
+  const [posts,setPost] = useState(defaultPosts)
+
+  const viewPosts = posts.filter((post => post.category == selectedView ))
+
   function addStory(params) {
     
 
   }
   function viewHandler(params) {
     console.loh("OK")
+  }
+
+
+
+  function createPost(post) {
+
+    setPost(
+      [
+        post,
+        ...posts,
+        
+      ]
+    )
+
   }
 
   return (
@@ -125,8 +238,8 @@ function App() {
                 <StoryList showStory={showStory} stories={stories} addStory={addStory}/>
             </div>
             <div className="posts">
-              <CreatePost  profileimg={profileInfo.profileimg}/>
-              <PostList profileimg={profileInfo.profileimg} postsCategory={selectedView} />
+              <CreatePost  profileimg={profileInfo.profileimg} createPost={createPost}/>
+              <PostList profileimg={profileInfo.profileimg} viewPosts={viewPosts} />
             </div>
           </div>
           <div className="right-side">
