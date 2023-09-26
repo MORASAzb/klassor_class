@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Leftbar.css';
 import activityImg from "./public/activity.png";
 import homeImg from "./public/home-2.png";
@@ -6,7 +6,13 @@ import saveImg from "./public/save-2.png";
 import messageImg from "./public/message-text.png";
 import userImg from "./public/user-square.png";
 
+
 function Leftbar(prop) {
+    const [selectedPage,setSelectedPage] = useState(0)
+    function chagePage(event) {
+        setSelectedPage(event.target.value)
+    }
+
     const menuList = [
         {
             name: "Home",
@@ -41,7 +47,7 @@ function Leftbar(prop) {
                     My Social
                     <ul>
                     {menuList.map((item, index) => (
-                        <li className={index==0 ? "selected-page":"" } key={index}>
+                        <li onClick={chagePage} value={index} className={index==selectedPage ? "selected-page":"" } key={index}>
                             <img src={item.Img} alt={item.name} />
                             {item.name}
                         </li>
