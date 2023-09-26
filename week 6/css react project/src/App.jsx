@@ -238,7 +238,7 @@ function App() {
                 <StoryList showStory={showStory} stories={stories} addStory={addStory}/>
             </div>
             <div className="posts">
-              <CreatePost  profileimg={profileInfo.profileimg} createPost={createPost}/>
+              <CreatePost  profileimg={profileInfo.profileimg} createPost={createPost} selectedView={selectedView}/>
               <PostList profileimg={profileInfo.profileimg} viewPosts={viewPosts} />
             </div>
           </div>

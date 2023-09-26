@@ -13,7 +13,7 @@ function CreatePost(prop) {
     if(input.length > 0){
         prop.createPost({
             id : Math.random(500,1500),
-            category:0,
+            category:prop.selectedView,
             Creator :{
                 nickname:"You",
                 profileImg:profileimg
