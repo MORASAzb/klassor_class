@@ -1,11 +1,11 @@
 import './Post.css'
-import PostInput from "./PostInput"
-import ProfileInfo from '../Navbar/Profile/ProfileInfo'
 import Post from "./Post.jsx"
 import smithImg from "./public/1.png"
 import stiveImg from "./public/3.png"
 
 function PostList(prop) {
+    const postsCategory=prop.postsCategory
+    
     const Posts = [{
         id:1,
         createdAt:'12:00',
@@ -13,9 +13,10 @@ function PostList(prop) {
         likes: "2.8K",
         commentsCount: 7,
         Creator :{
-            nickname:"Smith jems",
+            nickname:"Nilofar Karami",
             profileImg:smithImg
-        }
+        },
+        category:0,
 
     },{
         id:2,
@@ -24,10 +25,13 @@ function PostList(prop) {
         likes: "2.8K",
         commentsCount: 7,
         Creator :{
-            nickname:"Smith jems",
+            nickname:"Jamile Mojseni",
             profileImg:smithImg
         },
         img:stiveImg
+        ,
+        category:0,
+
 
     },
     {
@@ -37,9 +41,11 @@ function PostList(prop) {
         likes: "2.8K",
         commentsCount: 7,
         Creator :{
-            nickname:"Smith jems",
+            nickname:"Zahra Khayieri",
             profileImg:smithImg
-        }
+        },
+        category:0,
+
 
     },
     {
@@ -49,11 +55,13 @@ function PostList(prop) {
         likes: "2.8K",
         commentsCount: 7,
         Creator :{
-            nickname:"Smith jems",
+            nickname:"Poria Gol",
             profileImg:smithImg
         }
         ,
-        img:stiveImg
+        img:stiveImg,
+        category:1,
+
 
     },
     {
@@ -63,11 +71,12 @@ function PostList(prop) {
         likes: "2.8K",
         commentsCount: 7,
         Creator :{
-            nickname:"Smith jems",
+            nickname:"Hasan Maktob",
             profileImg:smithImg
-        }
+        },
+        category:2,
 
-    },]
+    },].filter((post => post.category == postsCategory ))
     const profileimg = prop.profileimg
 
   return (

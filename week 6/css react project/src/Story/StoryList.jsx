@@ -17,7 +17,7 @@ function StoryList(prop) {
                 {stories.map((value)=>{
                     return(
                             <li >
-                                <Story key={value.id} onClick={prop.showStory} profileURL={value.profileURL} username={value.username} seen={value.seen} />
+                                <Story storyID={value.id} key={value.id} onClick={prop.showStory} profileURL={value.profileURL} username={value.username} seen={value.seen} />
                             </li>
                             )
                                     })}

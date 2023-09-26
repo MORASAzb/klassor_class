@@ -15,7 +15,7 @@ function App() {
     {text:"Community post",link:"#"},
     {text:"Pages",link:"#"},
     ]
-  const stories = [{
+  const defaultStories = [{
       profileURL: profilePic,
       username:"Esther Howard",
       id:"1",
@@ -28,7 +28,7 @@ function App() {
       content:profilePic,
       seen:false,
   },{
-      profileURL: profilePic,
+      profileURL: profileIcon1,
       username:"Robert Fox",
       id:"3",
       content:profilePic,
@@ -40,7 +40,7 @@ function App() {
       content:profilePic,
       seen:false,
   },{
-      profileURL: profilePic,
+      profileURL: profileIcon1,
       username:"Annette Black",
       id:"5",
       content:profilePic,
@@ -88,8 +88,17 @@ function App() {
   }
 
   const [selectedView,setSelectedView] = useState(0)
-  function showStory(params) {
-      console.log("ok")
+  const [stories,setStories] = useState(defaultStories)
+
+
+
+  function showStory(id) {
+    const idStory= id
+    const newStories =  stories.map((story) => (story.id == String(idStory) ? { ...story, "seen": true } : story))
+    setStories( [...newStories])
+    const storyContent="Imagine this is Story u are watching !"
+    alert(storyContent)
+
   }
   function addStory(params) {
     
@@ -117,7 +126,7 @@ function App() {
             </div>
             <div className="posts">
               <CreatePost  profileimg={profileInfo.profileimg}/>
-              <PostList profileimg={profileInfo.profileimg} />
+              <PostList profileimg={profileInfo.profileimg} postsCategory={selectedView} />
             </div>
           </div>
           <div className="right-side">
