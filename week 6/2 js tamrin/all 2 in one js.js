@@ -49,7 +49,17 @@ function practiceTwo(str) {
         while (index < numbers.length) {
             
             if (!(numbers[index] == numbers[index+1] - 1 )){
-                answer.push(startedindex == index? numbers[index] : [numbers[startedindex] + "-" + numbers[index]])
+                if (startedindex == index) {
+                    answer.push(numbers[index])
+                }
+                else if(index == startedindex+1){
+                    answer.push(numbers[startedindex])
+                    answer.push(numbers[index])
+
+                }
+                else{
+                    answer.push([numbers[startedindex] + "-" + numbers[index]])
+                }
                 startedindex = index +1
             }
             index++
