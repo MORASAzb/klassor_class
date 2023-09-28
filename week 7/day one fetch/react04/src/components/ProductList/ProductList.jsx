@@ -21,11 +21,11 @@ const ProductList = () => {
 
     return (
         <>
-        <ProductRow>
+        <ProductRow >
            {
                 data.map((product, index) => (
-                    <div>
-                    <Product product={product} key={index} />
+                    <div key={index}>
+                    <Product product={product} />
   
                     </div>
                 ))
