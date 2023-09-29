@@ -7,6 +7,8 @@ import { ProductRow } from '../StyledComponents.jsx';
 const ProductList = () => {
     const [isLoaded, setIsLoaded] = useState(false)
     const [data, setData] = useState([])
+    const [filter, setFilter] = useState("")
+
 
     useEffect(() => {
         getProducts().then((data) => {
@@ -21,6 +23,7 @@ const ProductList = () => {
 
     return (
         <>
+        <input type="text" onc />
         <ProductRow >
            {
                 data.map((product, index) => (
