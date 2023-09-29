@@ -1,10 +1,13 @@
-import { useEffect, useState, } from 'react'
+import { useContext, useEffect, useState, } from 'react'
 import { categories } from './constants'
+import PropTypes from 'prop-types'
 import { FormControl, Input, InputLabel, Option, Select, SubmitButton, TextArea } from '../StyledComponents.jsx'
 import createProduct from '../../apis/createProduct'
+import { AppData } from '../../App'
 
 
 const ProductDataForm = () => {
+  const { onCreateNewProduct } = useContext(AppData)
   const [canSendData, setCanSendData] = useState(false)
   const [isCreating, setIsCreating] = useState(false)
 
@@ -50,11 +53,12 @@ const ProductDataForm = () => {
     if (validateFormData()) {
       setIsCreating(true)
       createProduct(formData).then(() => {
+        onCreateNewProduct();
         setIsCreating(false)
       })
-      .catch(() => {
-        setIsCreating(false)
-      })
+        .catch(() => {
+          setIsCreating(false)
+        })
       return
     }
 
@@ -127,13 +131,14 @@ const ProductDataForm = () => {
       </FormControl>
 
       <FormControl noBorder>
-        <SubmitButton disabled={!canSendData | isCreating} bgColor='#b56215' bgHoverColor="#d07725" type='submit'>{ isCreating ? 'Loading ...': 'Submit'}</SubmitButton>
+        <SubmitButton disabled={!canSendData | isCreating} bgColor='#b56215' bgHoverColor="#d07725" type='submit'>{isCreating ? 'Loading ...' : 'Submit'}</SubmitButton>
       </FormControl>
     </form>
   )
 }
 
 ProductDataForm.propTypes = {
+  onNewProduct: PropTypes.func.isRequired
 }
 
 export default ProductDataForm

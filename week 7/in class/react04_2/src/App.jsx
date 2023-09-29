@@ -13,7 +13,6 @@ function App() {
 
 const fetchProductList = () => {
     getProducts().then((data) => {
-      
         setData(data);
         setIsLoaded(true)
     })
